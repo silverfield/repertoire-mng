@@ -211,6 +211,10 @@
         "type": "nbt"
     },
     {
+        "name": "Damien Rice - I Dont Want To Change You",
+        "type": "nbt"
+    },
+    {
         "name": "Dire Straits - Romeo And Juliet",
         "type": "nbt"
     },
@@ -243,11 +247,23 @@
         "type": "nbt"
     },
     {
+        "name": "Eva Cassidy - Fields of Gold",
+        "type": "nbt"
+    },
+    {
+        "name": "FH - In style",
+        "type": "nbt"
+    },
+    {
         "name": "John Hiatt - Have a little faith in me",
         "type": "nbt"
     },
     {
         "name": "John Hughes - Calon lan",
+        "type": "nbt"
+    },
+    {
+        "name": "John Mayer - Age of Worry",
         "type": "nbt"
     },
     {
@@ -259,7 +275,15 @@
         "type": "nbt"
     },
     {
+        "name": "John Mayer - Dear Marie",
+        "type": "nbt"
+    },
+    {
         "name": "John Mayer - Edge of Desire",
+        "type": "nbt"
+    },
+    {
+        "name": "John Mayer - I Guess I Just Feel Like",
         "type": "nbt"
     },
     {
@@ -268,6 +292,14 @@
     },
     {
         "name": "John Mayer - Never on the Day You Leave",
+        "type": "nbt"
+    },
+    {
+        "name": "John Mayer - Something Like Olivia",
+        "type": "nbt"
+    },
+    {
+        "name": "John Mayer - Stop This Train",
         "type": "nbt"
     },
     {
@@ -323,6 +355,10 @@
         "type": "nbt"
     },
     {
+        "name": "Mark Knopfler - One Song at a Time",
+        "type": "nbt"
+    },
+    {
         "name": "Mark Knopfler - Ragpicker's dream",
         "type": "nbt"
     },
@@ -334,6 +370,10 @@
         "name": "Ray Charles - Hit The Road Jack (remastered)",
         "type": "nbt",
         "pdf": null
+    },
+    {
+        "name": "Simon & Garfunkel - The Boxer",
+        "type": "nbt"
     },
     {
         "name": "Simon And Garfunkel - Sound Of Silence",
@@ -349,6 +389,10 @@
     },
     {
         "name": "The Greatest Showman - This Is Me",
+        "type": "nbt"
+    },
+    {
+        "name": "Tina Turner - Proud Mary",
         "type": "nbt"
     },
     {

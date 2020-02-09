@@ -84,9 +84,8 @@ def create_all():
     with open(f'{JSON_DIR}/pl-all.json', 'w') as f:
         f.write(s)
 
-def create_repe(json_path, name=None, create_subsections=False):
-    if name is None:
-        name = json_path.split('/')[-1].split('.')[0]
+def create_repe(name, create_subsections=False, confirm_upload=True):
+    json_path = f"{JSON_DIR}/{name}.json"
 
     with open(json_path) as f:
         data = json.loads(f.read())
@@ -97,13 +96,17 @@ def create_repe(json_path, name=None, create_subsections=False):
         if 'section' in item:
             flat_data.extend(item['items'])
             if create_subsections:
-                create_repe(item['items'], name=f'{name}-{item["section"]}')
+                create_repe_from_data(
+                    item['items'], 
+                    name=f'{name}-{item["section"]}', 
+                    confirm_upload=confirm_upload
+                )
         else:
             flat_data.append(item)
 
-    create_repe(flat_data, name)
+    create_repe_from_data(flat_data, name, confirm_upload=confirm_upload)
 
-def create_repe_from_data(data, name):
+def create_repe_from_data(data, name, confirm_upload=True):
     output_dir = f'{OUTPUT_DIR}/{name}'
     mkdir(output_dir)
 
@@ -119,7 +122,12 @@ def create_repe_from_data(data, name):
     with open(f"{output_dir}/{name}.json", 'w') as f:
         f.write(json.dumps(data, indent=4))
 
-    input('\nProceed with upload? Press any key to continue...')
+    print('\nCopying locally to repertoire folder...')
+    shutil.copytree(output_dir, f"{REPE_FOLDER}/{name}")
+
+    if confirm_upload:
+        print(confirm_upload)
+        input('\nProceed with upload? Press any key to continue...')
     print('\n uploading to Drive...')
     upload_to_drive(output_dir, name)
 
@@ -347,10 +355,10 @@ def upload_to_drive(output_dir, name):
 def main(name='pl-main'):
     if len(sys.argv) > 1:
         name = sys.argv[1]
+    create_repe(name)
     
-    create_repe(f'{JSON_DIR}/{name}.json')
 
 if __name__ == "__main__":
-    main('pl-all')
+    create_repe('pl-2020', create_subsections=True, confirm_upload=False)
     create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
     create_all()
