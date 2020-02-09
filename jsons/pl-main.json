@@ -1,7 +1,7 @@
 [
     {
         "name": "John Mayer - Crossroads",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "MK - What it is - BT",
@@ -17,11 +17,11 @@
     },
     {
         "name": "John Mayer - The Heart Of Life",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "John Mayer - Edge of Desire",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "MK - Hillfarmer's blues - BT",
@@ -33,19 +33,19 @@
     },
     {
         "name": "Dire Straits - Six Blade Knife",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Chris Isaak - Wicked Game",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "John Mayer - Changing",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Matchstick Man",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "MK - Heart full of holes - BT",
@@ -53,16 +53,16 @@
     },
     {
         "name": "Mark Knopfler - Heart Full Of Holes",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Tommy Emmanuel - Those Who Wait",
-        "type": "loop",
-        "pdf": null
+        "type": "nbt",
+        "pdf": "/d/music/noty/tommy emmanuel\uff1athose who wait.pdf"
     },
     {
         "name": "Dire Straits - Romeo And Juliet",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "DS - Sultans of swing - BT",
@@ -94,43 +94,43 @@
     },
     {
         "name": "The Greatest Showman - A Million Dreams",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "The Greatest Showman - This Is Me",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "The Greatest Showman - From now on",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "A Star is Born - Always Remember Us This Way",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "A Star is Born - Shallow",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "John Mayer - Who says",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "John Mayer - In the Blood",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "John Mayer - Your Body Is a Wonderland",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Ed Sheeran - I See Fire",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Ed Sheeran - Thinking Out Loud",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "MK - I dug up a diamon - BT",
@@ -158,7 +158,7 @@
     },
     {
         "name": "John Hughes - Calon lan",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "MK - Boom like that - BT",
@@ -166,7 +166,7 @@
     },
     {
         "name": "Dire Straits - You And Your Friend",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "MK - Are we in trouble now - BT",
@@ -191,23 +191,23 @@
     },
     {
         "name": "Simon And Garfunkel - Sound Of Silence",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Get lucky",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Mark Knopfler - My heart has never changed",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Lights of Taormina",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Sailing to Philadelphia",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "Mike Oldfield - Moonlight shadow - BT",
@@ -228,7 +228,7 @@
     {
         "name": "MK - Going home 96 - BT",
         "type": "bt",
-        "pdf": null
+        "pdf": "/d/music/akordy/chords/Mark Knopfler - Local hero.pdf"
     },
     {
         "name": "MK - Piper to the end - BT",
@@ -240,7 +240,7 @@
     },
     {
         "name": "Ben E King - Stand By Me",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "FH - Let's go fail - BT",
@@ -264,10 +264,10 @@
     },
     {
         "name": "Linking Park - The Messenger",
-        "type": "loop"
+        "type": "nbt"
     },
     {
         "name": "John Mayer - Never on the Day You Leave",
-        "type": "loop"
+        "type": "nbt"
     }
 ]
