@@ -1,1 +1,8 @@
 output
+.vscode
+credentials.json
+token.pickle
+client_secrets.json
+__pycache__
+.ipynb_checkpoints
+*.ipynb

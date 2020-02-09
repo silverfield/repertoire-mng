@@ -57,7 +57,8 @@
     },
     {
         "name": "Tommy Emmanuel - Those Who Wait",
-        "type": "loop"
+        "type": "loop",
+        "pdf": null
     },
     {
         "name": "Dire Straits - Romeo And Juliet",
@@ -177,7 +178,8 @@
     },
     {
         "name": "FH - Summer tune - BT",
-        "type": "bt"
+        "type": "bt",
+        "pdf": null
     },
     {
         "name": "Notting Hillbillies - Feel Like Going Home - BT",
@@ -225,7 +227,8 @@
     },
     {
         "name": "MK - Going home 96 - BT",
-        "type": "bt"
+        "type": "bt",
+        "pdf": null
     },
     {
         "name": "MK - Piper to the end - BT",
