@@ -84,28 +84,42 @@ def create_all():
     with open(f'{JSON_DIR}/pl-all.json', 'w') as f:
         f.write(s)
 
-def create_repe(json_path, name=None):
+def create_repe(json_path, name=None, create_subsections=False):
     if name is None:
         name = json_path.split('/')[-1].split('.')[0]
 
+    with open(json_path) as f:
+        data = json.loads(f.read())
+    
+    # flatten structure
+    flat_data = []
+    for item in data:
+        if 'section' in item:
+            flat_data.extend(item['items'])
+            if create_subsections:
+                create_repe(item['items'], name=f'{name}-{item["section"]}')
+        else:
+            flat_data.append(item)
+
+    create_repe(flat_data, name)
+
+def create_repe_from_data(data, name):
     output_dir = f'{OUTPUT_DIR}/{name}'
     mkdir(output_dir)
 
     print(f'Output dir is {output_dir}')
 
-    with open(json_path) as f:
-        data = json.loads(f.read())
-
     print('\ncreating m3u...')
-    create_m3u(data, output_dir, name)
+    data = create_m3u(data, output_dir, name)
 
     print('\ncreating PDF...')
-    create_pdf(data, output_dir, name)
+    data = create_pdf(data, output_dir, name)
 
-    print('\ncopying JSON...')
-    shutil.copy(json_path, f"{output_dir}/{name}.json")
+    print('\ncreating JSON...')
+    with open(f"{output_dir}/{name}.json", 'w') as f:
+        f.write(json.dumps(data, indent=4))
 
-    input('Proceed with upload? Press any key to continue...')
+    input('\nProceed with upload? Press any key to continue...')
     print('\n uploading to Drive...')
     upload_to_drive(output_dir, name)
 
@@ -116,6 +130,9 @@ def create_m3u(data, output_dir, name):
     mp3_file_paths = []
 
     for item in data:
+        if 'mp3' in item and item['mp3'] is None:
+            continue
+
         s = ''
         s += 'bts/' if item['type'] == TYPE_BT else 'full-songs/'
         s += item['name']
@@ -124,8 +141,10 @@ def create_m3u(data, output_dir, name):
         fpath = f'{REPE_FOLDER}/{s}'
         if not os.path.exists(fpath):
             print(f'MP3 for {item["name"]} not found in {fpath}')
+            item['mp3'] = None
         else:
             mp3_file_paths.append(f'{fpath}\n')
+            item['mp3'] = fpath
 
         s = s.replace(' ', '%20')
         m3u_lines.append(f'#EXTINF:1,{item["name"]}\n')
@@ -134,11 +153,12 @@ def create_m3u(data, output_dir, name):
     with open(f'{output_dir}/{name}.m3u', 'w') as f:
         f.writelines(m3u_lines)
 
-    with open(f'{output_dir}/{name}_mp3_paths.txt', 'w') as f:
-        f.writelines(mp3_file_paths)
+    return data
 
 def create_pdf(data, output_dir, name):
     pdfs = get_pdf_paths(data)
+    for d, pdf in zip(data, pdfs):
+        d.update({'pdf': pdf})
 
     merger = PdfFileMerger()
 
@@ -149,6 +169,8 @@ def create_pdf(data, output_dir, name):
 
     merger.write(f"{output_dir}/{name}.pdf")
     merger.close()
+
+    return data
 
 def get_pdf_paths(data):
     all_pdfs = []
@@ -310,9 +332,13 @@ def upload_to_drive(output_dir, name):
     bt_folder_id = _gdrive_query(service, 'bts', is_folder=True, parent_id=repe_folder_id)[0]['id']
     fs_folder_id = _gdrive_query(service, 'full-songs', is_folder=True, parent_id=repe_folder_id)[0]['id']
     
-    with open(f'{output_dir}/{name}_mp3_paths.txt') as f:
-        for mp3_fpath in f.readlines():
-            mp3_fpath = mp3_fpath.strip()
+    with open(f'{output_dir}/{name}.json') as f:
+        data = json.loads(f.read())
+        for item in data:
+            if 'mp3' not in item or item['mp3'] is None:
+                continue
+
+            mp3_fpath = item['mp3'].strip()
             print(f'- uploading {mp3_fpath}...')
             parent_id = bt_folder_id if mp3_fpath.split('/')[-2] == 'bts' else fs_folder_id
             _create_or_update_file(service, mp3_fpath, mp3_fpath.split('/')[-1], parent_id, update=False)
@@ -325,6 +351,6 @@ def main(name='pl-main'):
     create_repe(f'{JSON_DIR}/{name}.json')
 
 if __name__ == "__main__":
-    main('pl-main')
+    main('pl-all')
     create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
     create_all()
