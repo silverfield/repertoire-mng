@@ -26,6 +26,7 @@ REPE_FOLDER = f'{PREFIX}/music/repertoire'
 
 SPEC_PDF_SONGS = {
     'FH - Summer tune - BT': None,
+    'DS - Going home - BT': f'{PREFIX}/music/akordy/chords/Mark Knopfler - Local hero.pdf',
     'MK - Going home 96 - BT': f'{PREFIX}/music/akordy/chords/Mark Knopfler - Local hero.pdf',
     'Ray Charles - Hit The Road Jack (remastered)': None,
     'Tommy Emmanuel - Those Who Wait': f'{PREFIX}/music/noty/tommy emmanuel：those who wait.pdf',
@@ -55,7 +56,7 @@ def create_json_from_m3u(m3u_path):
         if j[i]['name'] in SPEC_PDF_SONGS:
             j[i]['pdf'] = SPEC_PDF_SONGS[j[i]['name']]
 
-    s = json.dumps(j)
+    s = json.dumps(j, indent=4)
     name = m3u_path.split("/")[-1].split('.')[0]
     with open(f'{JSON_DIR}/{name}.json', 'w') as f:
         f.write(s)
@@ -79,7 +80,7 @@ def create_all():
         if j[i]['name'] in SPEC_PDF_SONGS:
             j[i]['pdf'] = SPEC_PDF_SONGS[j[i]['name']]
 
-    s = json.dumps(j)
+    s = json.dumps(j, indent=4)
     with open(f'{JSON_DIR}/pl-all.json', 'w') as f:
         f.write(s)
 
@@ -111,7 +112,7 @@ def create_repe(json_path, name=None):
     print('\nOK')
 
 def create_m3u(data, output_dir, name):
-    m3u_lines = []
+    m3u_lines = ['#EXTM3U\n']
     mp3_file_paths = []
 
     for item in data:
@@ -127,6 +128,7 @@ def create_m3u(data, output_dir, name):
             mp3_file_paths.append(f'{fpath}\n')
 
         s = s.replace(' ', '%20')
+        m3u_lines.append(f'#EXTINF:1,{item["name"]}\n')
         m3u_lines.append(f'../{s}\n')
 
     with open(f'{output_dir}/{name}.m3u', 'w') as f:
@@ -160,6 +162,9 @@ def get_pdf_paths(data):
     for item in data:
         if 'pdf' in item:
             pdfs.append(item['pdf'])
+            continue
+        elif item['name'] in SPEC_PDF_SONGS:
+            pdfs.append(SPEC_PDF_SONGS[item['name']])
             continue
 
         MAX_DIST = 999
@@ -320,6 +325,6 @@ def main(name='pl-main'):
     create_repe(f'{JSON_DIR}/{name}.json')
 
 if __name__ == "__main__":
-    main('pl-all')
-    # create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
-    # create_all()
+    main('pl-main')
+    create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
+    create_all()
