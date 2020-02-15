@@ -4,6 +4,7 @@ import editdistance
 from PyPDF2 import PdfFileMerger
 import shutil
 import sys
+from mutagen.mp3 import MP3
 
 import pickle
 import os.path
@@ -84,6 +85,17 @@ def create_all():
     with open(f'{JSON_DIR}/pl-all.json', 'w') as f:
         f.write(s)
 
+def create_loop_pos_file():
+    full_song_files = [f for f in os.listdir(f'{REPE_FOLDER}/full-songs') if f.endswith('.mp3')]
+
+    j = {
+        f.split('.')[0]: -1 for f in full_song_files
+    }
+
+    s = json.dumps(j, indent=4)
+    with open(f'./loop-pos.json', 'w') as f:
+        f.write(s)
+
 def create_repe(name, create_subsections=False, confirm_upload=True):
     json_path = f"{JSON_DIR}/{name}.json"
 
@@ -123,7 +135,10 @@ def create_repe_from_data(data, name, confirm_upload=True):
         f.write(json.dumps(data, indent=4))
 
     print('\nCopying locally to repertoire folder...')
-    shutil.copytree(output_dir, f"{REPE_FOLDER}/{name}")
+    target_path = f"{REPE_FOLDER}/{name}"
+    if os.path.exists(target_path):
+        shutil.rmtree(target_path)
+    shutil.copytree(output_dir, target_path)
 
     if confirm_upload:
         print(confirm_upload)
@@ -137,10 +152,11 @@ def create_m3u(data, output_dir, name):
     m3u_lines = ['#EXTM3U\n']
     mp3_file_paths = []
 
-    for item in data:
-        if 'mp3' in item and item['mp3'] is None:
-            continue
+    with open('./loop-pos.json', 'r') as f:
+        loop_pos = json.loads(f.read())
+        loop_pos = {key.lower(): value for key, value in loop_pos.items()}
 
+    for item in data:
         s = ''
         s += 'bts/' if item['type'] == TYPE_BT else 'full-songs/'
         s += item['name']
@@ -153,9 +169,22 @@ def create_m3u(data, output_dir, name):
         else:
             mp3_file_paths.append(f'{fpath}\n')
             item['mp3'] = fpath
+            
+            mp3 = MP3(fpath)
+            try:
+                mp3.delete()
+                mp3.save()
+            except:
+                pass
+
 
         s = s.replace(' ', '%20')
-        m3u_lines.append(f'#EXTINF:1,{item["name"]}\n')
+        
+        name_info = item["name"]
+        if item['name'].lower() in loop_pos:
+            name_info += f' - {loop_pos[item["name"].lower()]}'
+
+        m3u_lines.append(f'#EXTINF:1,{name_info}\n')
         m3u_lines.append(f'../{s}\n')
 
     with open(f'{output_dir}/{name}.m3u', 'w') as f:
@@ -359,6 +388,7 @@ def main(name='pl-main'):
     
 
 if __name__ == "__main__":
+    # create_loop_pos_file()
     create_repe('pl-2020', create_subsections=True, confirm_upload=False)
-    create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
-    create_all()
+    # create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
+    # create_all()
