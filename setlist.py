@@ -62,6 +62,60 @@ def create_json_from_m3u(m3u_path):
     with open(f'{JSON_DIR}/{name}.json', 'w') as f:
         f.write(s)
 
+def make_repe_for_web():
+    with open(f'{JSON_DIR}/pl-all.json', 'r') as f:
+        data = json.loads(f.read())
+
+        new_data = []
+        for item in data:
+            name = item['name']
+            if '-' in name:
+                name = name.split('-')[1].strip()
+            
+            interpret = item['name'].split('-')[0].strip()
+            if interpret == 'EC':
+                interpret = 'Eric Clapton'
+            if interpret == 'PF':
+                interpret = 'Pink Floyd'
+            if interpret == 'A Star is Born':
+                interpret += ' soundtrack'
+            if interpret == 'The Greatest Showman':
+                interpret += ' soundtrack'
+            if interpret == 'DS':
+                interpret = 'Dire Straits'
+            if interpret == 'MK':
+                interpret = 'Mark Knopfler'
+            if interpret == 'FH':
+                interpret = 'Fero Hajnovic'
+
+            tp = item['type']
+
+            tags = []
+            if 'genres' in item:
+                tags = item['tags']
+
+            new_item = {
+                'interpret': interpret,
+                'name': name,
+                'bt': tp == 'bt',
+                'nbt': tp == 'nbt',
+                'tags': tags
+            }
+
+            matching_items = [i for i in new_data if name == i['name'] and interpret == i['interpret']])
+            if len(matching_items) > 0:
+                new_item['bt'] = new_item['bt'] or any(i['bt'] for i in matching_items)
+                new_item['nbt'] = new_item['nbt'] or any(i['nbt'] for i in matching_items)
+                new_item['tags'] = list(set(new_item['tags'] + [tag for i in matching_items for tag in i['tags']]))
+
+            new_data.append(new_item)
+
+        
+
+        with open(f'{OUTPUT_DIR}/web_repe.json', 'w') as fout:
+            fout.write(json.dumps(new_data, indent=4))
+
+
 def create_all():
     bts_files = [f for f in os.listdir(f'{REPE_FOLDER}/bts') if f.endswith('.mp3')]
     full_song_files = [f for f in os.listdir(f'{REPE_FOLDER}/full-songs') if f.endswith('.mp3')]
@@ -389,6 +443,7 @@ def main(name='pl-main'):
 
 if __name__ == "__main__":
     # create_loop_pos_file()
-    create_repe('pl-2020', create_subsections=True, confirm_upload=False)
+    # create_repe('pl-2020', create_subsections=True, confirm_upload=False)
     # create_json_from_m3u('/d/music/repertoire/pl-main.m3u')
     # create_all()
+    make_repe_for_web()

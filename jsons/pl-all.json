@@ -1,402 +1,509 @@
 [
     {
         "name": "DS - Brothers in arms - BT",
+        "tags": ["ambient", "dsmk", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "DS - Down to the waterline - BT",
+        "tags": ["guitary"],
+        "webrepe": false,
         "type": "bt"
     },
     {
         "name": "DS - Going home - BT",
         "type": "bt",
+        "tags": ["dsmk", "guitary", "rocky", "instrumental"],
+        "webrepe": false,
         "pdf": "/d/music/akordy/chords/Mark Knopfler - Local hero.pdf"
     },
     {
         "name": "DS - Money for nothing - BT",
+        "tags": ["dsmk", "rocky"],
+        "webrepe": false,
         "type": "bt"
     },
     {
         "name": "DS - Money for nothing - shorter - BT",
+        "tags": ["dsmk", "rocky", "guitary", "famous"],
         "type": "bt"
     },
     {
         "name": "DS - On every street",
+        "tags": ["dsmk", "ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "DS - Private investigations - BT",
+        "tags": ["dsmk", "ambient", "acoustic", "songwrite", "guitary"],
         "type": "bt"
     },
     {
         "name": "DS - Romeo and Juliet - BT",
+        "tags": ["dsmk", "ambient", "acoustic", "famous"],
         "type": "bt"
     },
     {
         "name": "DS - Six blade knife - BT",
+        "tags": ["dsmk", "rocky", "acoustic", "guitary"],
         "type": "bt"
     },
     {
         "name": "DS - Sultans of swing - BT",
+        "tags": ["famous", "dsmk", "rocky", "acoustic", "guitary"],
         "type": "bt"
     },
     {
         "name": "DS - Telegraph road - BT",
+        "tags": ["dsmk", "rocky", "guitary"],
         "type": "bt"
     },
     {
         "name": "DS - Tunnel of love - BT",
+        "tags": ["dsmk", "rocky", "guitary"],
         "type": "bt"
     },
     {
         "name": "DS - Walk of life - BT",
+        "tags": ["dsmk", "rocky"],
+        "webrepe": false,
         "type": "bt"
     },
     {
         "name": "DS - Where do you think you're going - BT",
+        "tags": ["rocky", "acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "EC - Layla - BT",
+        "tags": ["famous", "rhythm", "acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - African Bird - BT",
+        "tags": ["ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Bluff - BT",
+        "tags": ["acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Calling at Newport - BT",
+        "tags": ["rocky", "acoustic", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Daily ride - BT",
+        "tags": ["rocky", "acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Everyday - BT",
+        "tags": ["rocky", "acoustic", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Fargo and Pelgrim - BT",
+        "tags": ["acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Happy Home - BT",
+        "tags": ["rhythm", "acoustic"],
         "type": "bt"
     },
     {
         "name": "FH - Hey dad",
+        "tags": ["acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Let's go fail - BT",
+        "tags": ["rhythm", "acoustic"],
         "type": "bt"
     },
     {
         "name": "FH - Summer breeze - BT",
+        "tags": ["acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "FH - Summer tune - BT",
+        "tags": ["acoustic", "ambient", "guitary", "instrumental"],
         "type": "bt",
         "pdf": null
     },
     {
         "name": "FH - Vices - BT",
+        "tags": ["acoustic", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "MK - Are we in trouble now - BT",
+        "tags": ["ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "MK - Boom like that - BT",
+        "tags": ["rocky", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Darling pretty - BT",
+        "tags": ["rocky", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Darling pretty - rythm intro - BT",
+        "webrepe": false,
+        "tags": ["rocky", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Davil Baby - BT",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Going home 96 - BT",
+        "tags": ["dsmk", "rocky", "guitary"],
         "type": "bt",
         "pdf": "/d/music/akordy/chords/Mark Knopfler - Local hero.pdf"
     },
     {
         "name": "MK - Golden Heart - BT",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Heart full of holes - BT",
+        "tags": ["ambient", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Hillfarmer's blues - BT",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - I dug up a diamon - BT",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Local hero - BT",
+        "tags": ["dsmk", "ambient", "guitary"],
         "type": "bt"
     },
     {
         "name": "MK - Piper to the end - BT",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Sailing to Philadelphia - BT",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "bt"
     },
     {
         "name": "MK - Speedway At Nazareth - BT",
+        "tags": ["rocky", "guitary", "dsmk"],
         "type": "bt"
     },
     {
         "name": "MK - What it is - BT",
+        "tags": ["rocky", "guitary", "dsmk"],
         "type": "bt"
     },
     {
         "name": "Mike Oldfield - Moonlight shadow - BT",
+        "webrepe": false,
+        "tags": ["rocky", "guitary", "famous"],
         "type": "bt"
     },
     {
         "name": "Notting Hillbillies - Feel Like Going Home - BT",
+        "tags": ["ambient", "guitary", "acoustic", "singing"],
         "type": "bt"
     },
     {
         "name": "PF - Coming Back To Life - BT",
+        "tags": ["ambient", "guitary", "rocky"],
         "type": "bt"
     },
     {
         "name": "PF - Lost For Words - BT",
+        "webrepe": false,
+        "tags": ["acoustic", "guitary", "rocky"],
         "type": "bt"
     },
     {
         "name": "A Great Big World & Christina Aguilera - Say Something",
+        "tags": ["famous", "ambient", "acoustic", "singing"],
         "type": "nbt"
     },
     {
         "name": "A Star is Born - Always Remember Us This Way",
+        "tags": ["famous", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "A Star is Born - Maybe Its Time",
+        "tags": ["famous", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "A Star is Born - Shallow",
+        "tags": ["famous", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Ben E King - Stand By Me",
+        "tags": ["famous", "singing", "rhythm", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Chris Isaak - Wicked Game",
+        "tags": ["famous", "singing", "acoustic", "ambient"],
         "type": "nbt"
     },
     {
         "name": "Damien Rice - I Dont Want To Change You",
+        "webrepe": false,
+        "tags": ["famous", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Dire Straits - Romeo And Juliet",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Dire Straits - Six Blade Knife",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Dire Straits - Where Do You Think You're Going",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Dire Straits - You And Your Friend",
+        "tags": ["ambient", "dsmk", "guitary"],
         "type": "nbt"
     },
     {
         "name": "Ed Sheeran - I See Fire",
+        "tags": ["famous", "rhythm", "guitary"],
         "type": "nbt"
     },
     {
         "name": "Ed Sheeran - Perfect",
+        "tags": ["famous", "ambient", "singing"],
         "type": "nbt"
     },
     {
         "name": "Ed Sheeran - Thinking Out Loud",
+        "tags": ["famous", "rhythm", "singing"],
         "type": "nbt"
     },
     {
         "name": "Eric Clapton - Layla",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Eva Cassidy - Fields of Gold",
+        "tags": ["ambient", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "FH - In style",
+        "tags": ["ambient", "songwrite", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Hiatt - Have a little faith in me",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Hughes - Calon lan",
+        "tags": ["ambient", "instrumental"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Age of Worry",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Changing",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Crossroads",
+        "tags": ["rocky", "guitary"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Dear Marie",
+        "tags": ["ambient", "guitary", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Edge of Desire",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - I Guess I Just Feel Like",
+        "tags": ["famous", "ambient", "acoustic", "guitary"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - In the Blood",
+        "tags": ["famous", "acoustic", "rhythm"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Never on the Day You Leave",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Something Like Olivia",
+        "tags": ["rhythm", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Stop This Train",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - The Heart Of Life",
+        "tags": ["ambient", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Who says",
+        "tags": ["rhythm", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "John Mayer - Your Body Is a Wonderland",
+        "tags": ["rhythm", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Leonard Cohen - Hallelujah",
+        "tags": ["ambient", "famous", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Linking Park - The Messenger",
+        "tags": ["ambient", "famous", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Belle Star",
+        "tags": ["rocky", "singing", "acoustic"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Get lucky",
+        "tags": ["ambient", "acoustic", "songwrite"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Golden Heart",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Heart Full Of Holes",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Heart of oak",
+        "tags": ["ambient", "acoustic", "songwrite"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Lights of Taormina",
+        "tags": ["ambient", "acoustic", "songwrite", "guitary"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Matchstick Man",
+        "tags": ["ambient", "acoustic", "songwrite"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - My heart has never changed",
+        "tags": ["ambient", "acoustic", "songwrite"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - One Song at a Time",
+        "tags": ["ambient", "acoustic", "songwrite"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Ragpicker's dream",
+        "tags": ["ambient", "acoustic", "songwrite"],
         "type": "nbt"
     },
     {
         "name": "Mark Knopfler - Sailing to Philadelphia",
+        "tags": [],
         "type": "nbt"
     },
     {
         "name": "Ray Charles - Hit The Road Jack (remastered)",
+        "tags": ["rhythm", "acoustic", "famous"],
         "type": "nbt",
         "pdf": null
     },
     {
         "name": "Simon & Garfunkel - The Boxer",
+        "tags": ["ambient", "acoustic", "songwrite", "singing"],
         "type": "nbt"
     },
     {
         "name": "Simon And Garfunkel - Sound Of Silence",
+        "tags": ["ambient", "acoustic", "famous", "singing"],
         "type": "nbt"
     },
     {
         "name": "The Greatest Showman - A Million Dreams",
+        "tags": ["acoustic", "famous", "singing"],
         "type": "nbt"
     },
     {
         "name": "The Greatest Showman - From now on",
+        "tags": ["acoustic", "famous", "singing"],
         "type": "nbt"
     },
     {
         "name": "The Greatest Showman - This Is Me",
+        "tags": ["ambient", "acoustic", "famous", "singing"],
         "type": "nbt"
     },
     {
         "name": "Tina Turner - Proud Mary",
+        "tags": ["rhythm", "acoustic", "famous", "singing"],
         "type": "nbt"
     },
     {
         "name": "Tommy Emmanuel - Those Who Wait",
+        "tags": ["instrumental", "ambient", "acoustic", "guitary"],
         "type": "nbt",
         "pdf": "/d/music/noty/tommy emmanuel\uff1athose who wait.pdf"
     }
