@@ -68,6 +68,9 @@ def make_repe_for_web():
 
         new_data = []
         for item in data:
+            if 'webrepe' in item and item['webrepe'] == False:
+                continue
+
             name = item['name']
             if '-' in name:
                 name = name.split('-')[1].strip()
@@ -91,7 +94,7 @@ def make_repe_for_web():
             tp = item['type']
 
             tags = []
-            if 'genres' in item:
+            if 'tags' in item:
                 tags = item['tags']
 
             new_item = {
@@ -102,7 +105,7 @@ def make_repe_for_web():
                 'tags': tags
             }
 
-            matching_items = [i for i in new_data if name == i['name'] and interpret == i['interpret']])
+            matching_items = [i for i in new_data if name == i['name'] and interpret == i['interpret']]
             if len(matching_items) > 0:
                 new_item['bt'] = new_item['bt'] or any(i['bt'] for i in matching_items)
                 new_item['nbt'] = new_item['nbt'] or any(i['nbt'] for i in matching_items)
