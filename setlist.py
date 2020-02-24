@@ -13,7 +13,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.http import MediaFileUpload
 
-JSON_DIR = './jsons'
+INPUT_DIR = './input'
 OUTPUT_DIR = './output'
 
 TYPE_BT = 'bt'
@@ -26,7 +26,6 @@ PDF_DIRS = [f'{PREFIX}/music/akordy/chords', f'{PREFIX}/music/akordy/fero-hajnov
 REPE_FOLDER = f'{PREFIX}/music/repertoire'
 
 SPEC_PDF_SONGS = {
-    'FH - Summer tune - BT': None,
     'DS - Going home - BT': f'{PREFIX}/music/akordy/chords/Mark Knopfler - Local hero.pdf',
     'MK - Going home 96 - BT': f'{PREFIX}/music/akordy/chords/Mark Knopfler - Local hero.pdf',
     'Ray Charles - Hit The Road Jack (remastered)': None,
@@ -36,34 +35,11 @@ SPEC_PDF_SONGS = {
 def mkdir(d):
     if not os.path.exists(d):
         os.mkdir(d)
-mkdir(JSON_DIR)
+mkdir(INPUT_DIR)
 mkdir(OUTPUT_DIR)
 
-def create_json_from_m3u(m3u_path):
-    with open(m3u_path) as f:
-        lines = f.readlines()
-
-    lines = [l for l in lines if not l.startswith('#')]
-    lines = [l.split('.')[0] for l in lines]
-    lines = [l.replace('%20', ' ') for l in lines]
-    
-    j = [
-        {
-            'name': line.split('/')[1],
-            'type': TYPE_BT if line.split('/')[0] == 'bts' else TYPE_NBT
-        } for line in lines
-    ]
-    for i in range(len(j)):
-        if j[i]['name'] in SPEC_PDF_SONGS:
-            j[i]['pdf'] = SPEC_PDF_SONGS[j[i]['name']]
-
-    s = json.dumps(j, indent=4)
-    name = m3u_path.split("/")[-1].split('.')[0]
-    with open(f'{JSON_DIR}/{name}.json', 'w') as f:
-        f.write(s)
-
 def make_repe_for_web():
-    with open(f'{JSON_DIR}/pl-all.json', 'r') as f:
+    with open(f'{INPUT_DIR}/pl-all.json', 'r') as f:
         data = json.loads(f.read())
 
         new_data = []
@@ -75,21 +51,21 @@ def make_repe_for_web():
             if '-' in name:
                 name = name.split('-')[1].strip()
             
-            interpret = item['name'].split('-')[0].strip()
-            if interpret == 'EC':
-                interpret = 'Eric Clapton'
-            if interpret == 'PF':
-                interpret = 'Pink Floyd'
-            if interpret == 'A Star is Born':
-                interpret += ' soundtrack'
-            if interpret == 'The Greatest Showman':
-                interpret += ' soundtrack'
-            if interpret == 'DS':
-                interpret = 'Dire Straits'
-            if interpret == 'MK':
-                interpret = 'Mark Knopfler'
-            if interpret == 'FH':
-                interpret = 'Fero Hajnovic'
+            artist = item['name'].split('-')[0].strip()
+            if artist == 'EC':
+                artist = 'Eric Clapton'
+            if artist == 'PF':
+                artist = 'Pink Floyd'
+            if artist == 'A Star is Born':
+                artist += ' soundtrack'
+            if artist == 'The Greatest Showman':
+                artist += ' soundtrack'
+            if artist == 'DS':
+                artist = 'Dire Straits'
+            if artist == 'MK':
+                artist = 'Mark Knopfler'
+            if artist == 'FH':
+                artist = 'Fero Hajnovic'
 
             tp = item['type']
 
@@ -98,20 +74,27 @@ def make_repe_for_web():
                 tags = item['tags']
 
             new_item = {
-                'interpret': interpret,
+                'artist': artist,
                 'name': name,
                 'bt': tp == 'bt',
                 'nbt': tp == 'nbt',
                 'tags': tags
             }
 
-            matching_items = [i for i in new_data if name == i['name'] and interpret == i['interpret']]
+            matching_items = [
+                (i, item) 
+                for i, item in enumerate(new_data) 
+                if name.lower() == item['name'].lower() and artist.lower() == item['artist'].lower()
+            ]
             if len(matching_items) > 0:
-                new_item['bt'] = new_item['bt'] or any(i['bt'] for i in matching_items)
-                new_item['nbt'] = new_item['nbt'] or any(i['nbt'] for i in matching_items)
-                new_item['tags'] = list(set(new_item['tags'] + [tag for i in matching_items for tag in i['tags']]))
-
-            new_data.append(new_item)
+                matching_item = matching_items[0][1]
+                pos = matching_items[0][0]
+                new_item['bt'] = new_item['bt'] or matching_item['bt']
+                new_item['nbt'] = new_item['nbt'] or matching_item['nbt']
+                new_item['tags'] = list(set(new_item['tags'] + matching_item['tags']))
+                new_data[pos] = new_item
+            else:
+                new_data.append(new_item)
 
         
 
@@ -139,7 +122,7 @@ def create_all():
             j[i]['pdf'] = SPEC_PDF_SONGS[j[i]['name']]
 
     s = json.dumps(j, indent=4)
-    with open(f'{JSON_DIR}/pl-all.json', 'w') as f:
+    with open(f'{INPUT_DIR}/pl-all.json', 'w') as f:
         f.write(s)
 
 def create_loop_pos_file():
@@ -154,7 +137,7 @@ def create_loop_pos_file():
         f.write(s)
 
 def create_repe(name, create_subsections=False, confirm_upload=True):
-    json_path = f"{JSON_DIR}/{name}.json"
+    json_path = f"{JINPUT_DIRSON_DIR}/{name}.json"
 
     with open(json_path) as f:
         data = json.loads(f.read())
