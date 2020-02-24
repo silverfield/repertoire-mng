@@ -12,7 +12,7 @@
         "name": "DS - Going home",
         "tags": ["dsmk", "guitary", "rocky", "instrumental"],
         "webrepe": false,
-        "pdf": "/d/music/akordy/chords/Mark Knopfler - Local hero.pdf"
+        "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf"
     },
     {
         "name": "DS - Money for nothing",
@@ -132,7 +132,7 @@
     {
         "name": "MK - Going home 96",
         "tags": ["dsmk", "rocky", "guitary"],
-        "pdf": "/d/music/akordy/chords/Mark Knopfler - Local hero.pdf"
+        "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf"
     },
     {
         "name": "MK - Golden Heart",
@@ -373,6 +373,6 @@
     {
         "name": "Tommy Emmanuel - Those Who Wait",
         "tags": ["instrumental", "relaxed", "acoustic", "guitary"],
-        "pdf": "/d/music/noty/tommy emmanuel\uff1athose who wait.pdf"
+        "pdf": "PREFIX/music/noty/tommy emmanuel-those who wait.pdf"
     }
 ]
