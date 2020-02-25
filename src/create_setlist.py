@@ -17,7 +17,7 @@ def create_repe(name, create_subsections=False, confirm_upload=True):
     # flatten structure
     flat_data = []
     for item in data:
-        if 'section' in item:
+        if type(item) == type({}) and 'section' in item:
             flat_data.extend(item['items'])
             if create_subsections:
                 create_repe_from_data(
@@ -37,14 +37,21 @@ def create_repe_from_data(data, name, confirm_upload=True):
     print(f'Output dir is {output_dir}')
 
     print('\ncreating m3u...')
-    data = create_m3u(data, output_dir, name)
+    mp3_props = create_m3u(data, output_dir, name)
 
     print('\ncreating PDF...')
-    data = create_pdf(data, output_dir, name)
+    pdf_props = create_pdf(data, output_dir, name)
 
-    print('\ncreating JSON...')
+    final_json = {}
+    for item in data:
+        final_json[item] = {}
+        final_json[item]['mp3'] = mp3_props[item]
+        final_json[item]['pdf'] = pdf_props[item]
+        final_json[item].update(get_song_props(item))
+
+    print('\ncreating final JSON...')
     with open(f"{output_dir}/{name}.json", 'w') as f:
-        f.write(json.dumps(data, indent=4))
+        f.write(json.dumps(final_json, indent=4))
 
     print('\nCopying locally to repertoire folder...')
     target_path = f"{REPE_FOLDER}/{name}"
@@ -64,24 +71,27 @@ def create_m3u(data, output_dir, name):
     m3u_lines = ['#EXTM3U\n']
     mp3_file_paths = []
 
-    with open('./loop-pos.json', 'r') as f:
+    with open(f'{DATA_DIR}/loop-pos.json', 'r') as f:
         loop_pos = json.loads(f.read())
         loop_pos = {key.lower(): value for key, value in loop_pos.items()}
 
+    mp3_props = {}
+
     for item in data:
         s = ''
-        s += 'bts/' if item['type'] == TYPE_BT else 'full-songs/'
-        s += item['name']
+        s += 'bts/' if is_bt(item) else 'full-songs/'
+        s += item
         s += '.mp3'
 
         fpath = f'{REPE_FOLDER}/{s}'
         if not os.path.exists(fpath):
-            print(f'MP3 for {item["name"]} not found in {fpath}')
-            item['mp3'] = None
+            print(f'MP3 for {item} not found in {fpath}')
+            mp3_props[item] = None
         else:
             mp3_file_paths.append(f'{fpath}\n')
-            item['mp3'] = fpath
+            mp3_props[item] = fpath
             
+            #remove ID3 tags
             mp3 = MP3(fpath)
             try:
                 mp3.delete()
@@ -89,12 +99,11 @@ def create_m3u(data, output_dir, name):
             except:
                 pass
 
-
         s = s.replace(' ', '%20')
         
-        name_info = item["name"]
-        if item['name'].lower() in loop_pos:
-            name_info += f' - {loop_pos[item["name"].lower()]}'
+        name_info = item
+        if item.lower() in loop_pos:
+            name_info += f' - {loop_pos[item.lower()]}'
 
         m3u_lines.append(f'#EXTINF:1,{name_info}\n')
         m3u_lines.append(f'../{s}\n')
@@ -102,12 +111,11 @@ def create_m3u(data, output_dir, name):
     with open(f'{output_dir}/{name}.m3u', 'w') as f:
         f.writelines(m3u_lines)
 
-    return data
+    return mp3_props
 
 def create_pdf(data, output_dir, name):
     pdfs = get_pdf_paths(data)
-    for d, pdf in zip(data, pdfs):
-        d.update({'pdf': pdf})
+    pdf_props = {item: pdf for item, pdf in zip(data, pdfs)}
 
     merger = PdfFileMerger()
 
@@ -119,7 +127,7 @@ def create_pdf(data, output_dir, name):
     merger.write(f"{output_dir}/{name}.pdf")
     merger.close()
 
-    return data
+    return pdf_props
 
 def get_pdf_paths(data):
     all_pdfs = []
@@ -130,12 +138,14 @@ def get_pdf_paths(data):
         ])
 
     pdfs = []
+
     for item in data:
-        if 'pdf' in item:
-            pdfs.append(item['pdf'])
-            continue
-        elif item['name'] in SPEC_PDF_SONGS:
-            pdfs.append(SPEC_PDF_SONGS[item['name']])
+        item_props = get_song_props(item)
+        if 'pdf' in item_props:
+            if item_props['pdf'] == None:
+                pdfs.append(None)
+                continue
+            pdfs.append(item_props['pdf'].replace('PREFIX', PREFIX))
             continue
 
         MAX_DIST = 999
@@ -146,7 +156,7 @@ def get_pdf_paths(data):
             pdf_name = pdf.split('/')[-1].split('.')[0].lower()
             if '-' in pdf_name:
                 pdf_name = pdf_name.split('-')[1].strip()
-            item_name = item['name'].lower().split('-')[1].strip()
+            item_name = get_full_name(item).lower().split('-')[1].strip()
 
             dist = editdistance.eval(pdf_name, item_name)
 
@@ -159,7 +169,7 @@ def get_pdf_paths(data):
         else:
             pdfs.append(None)
 
-    for z in zip([i['name'] for i in data], [p for p in pdfs]):
+    for z in zip([get_full_name(i) for i in data], [p for p in pdfs]):
         print(z)
 
     print(f'Found {len([p for p in pdfs if p is not None])} PDFs for {len(data)} items')
@@ -203,4 +213,5 @@ def upload_to_drive(output_dir, name):
 
 
 if __name__ == "__main__":
-    create_repe('pl-2020', create_subsections=False, confirm_upload=False)
+    # create_repe('pl-2020', create_subsections=False, confirm_upload=False)
+    create_repe('pl-all', create_subsections=False, confirm_upload=False)

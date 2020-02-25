@@ -1,5 +1,10 @@
-DATA_DIR = './data'
-OUTPUT_DIR = './output'
+import os
+import json
+
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+
+DATA_DIR = f'{cur_dir}/../data'
+OUTPUT_DIR = f'{cur_dir}/../output'
 
 TYPE_BT = 'bt'
 TYPE_NBT = 'nbt'
@@ -15,3 +20,52 @@ def mkdir(d):
         os.mkdir(d)
 mkdir(DATA_DIR)
 mkdir(OUTPUT_DIR)
+
+COMMON_ABBRS = [
+    ['FH', 'Fero Hajnovic'],
+    ['DS', 'Dire Straits'],
+    ['MK', 'Mark Knopfler'],
+    ['EC', 'Eric Clapton'],
+    ['PF', 'Pink Floyd'],
+]
+COMMON_ABBRS.extend([abbr[::-1] for abbr in COMMON_ABBRS])
+
+def get_artist(item):
+    return item.split(' - ')[0]
+
+def get_name(item):
+    return item.split(' - ')[1]
+
+def get_full_name(item):
+    return f'{get_artist(item)} - {get_name(item)}'
+
+def is_bt(item):
+    return item.split(' - ')[-1] == 'BT'
+
+with open(f'{DATA_DIR}/song-props.json', 'r') as f:
+    PROPS = json.loads(f.read())
+    PROPS = {i['name'].lower(): i for i in PROPS}
+
+def get_song_props(item):
+    key = get_full_name(item).lower()
+
+    if key in PROPS:
+        return PROPS[key]
+    else:
+        for abbr in COMMON_ABBRS:
+            key_rep = key.replace(abbr[0].lower(), abbr[1].lower())
+            print(key_rep)
+            if key_rep in PROPS:
+                return PROPS[key_rep]
+
+    err_msg = f'{item} not found in props'
+    print(err_msg)
+    print('Maybe add something like this to song-props.json:')
+    print(json.dumps({
+        "name": item,
+        "tags": [],
+        "webrepe": False
+    }, indent=4))
+
+    raise KeyError(err_msg)
+

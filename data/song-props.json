@@ -65,6 +65,14 @@
         "tags": ["relaxed", "guitary"]
     },
     {
+        "name": "FH - Ocean shore",
+        "tags": ["relaxed", "guitary", "acoustic"]
+    },
+    {
+        "name": "FH - Sticks in the water",
+        "tags": ["relaxed", "guitary", "acoustic"]
+    },
+    {
         "name": "FH - Bluff",
         "tags": ["acoustic", "relaxed", "guitary"]
     },
@@ -374,5 +382,15 @@
         "name": "Tommy Emmanuel - Those Who Wait",
         "tags": ["instrumental", "relaxed", "acoustic", "guitary"],
         "pdf": "PREFIX/music/noty/tommy emmanuel-those who wait.pdf"
+    },
+    {
+        "name": "Doris Day - Dream A Little Dream of Me",
+        "tags": [],
+        "webrepe": false
+    },
+    {
+        "name": "Fools Garden - Lemon Tree",
+        "tags": [],
+        "webrepe": false
     }
 ]
