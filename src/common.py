@@ -54,7 +54,6 @@ def get_song_props(item):
     else:
         for abbr in COMMON_ABBRS:
             key_rep = key.replace(abbr[0].lower(), abbr[1].lower())
-            print(key_rep)
             if key_rep in PROPS:
                 return PROPS[key_rep]
 
