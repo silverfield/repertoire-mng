@@ -37,8 +37,8 @@ def make_repe_for_web(pl='pl-all'):
             new_item = {
                 'artist': artist,
                 'name': name,
-                'bt': is_bt(item),
-                'nbt': not is_bt(item),
+                'bt': is_bt(item) or ('bt' in item_props['versions']),
+                'nbt': not is_bt(item) or ('nbt' in item_props['versions']),
                 'tags': tags
             }
             key = f'{artist}_{name}'.lower()
@@ -56,3 +56,11 @@ def make_repe_for_web(pl='pl-all'):
 
 if __name__ == "__main__":
     make_repe_for_web('pl-all')
+    make_repe_for_web('pl-web-gig-background-nbt')
+    make_repe_for_web('pl-web-gig-fri-pub-nbt')
+    make_repe_for_web('pl-web-gig-originals')
+
+    import shutil
+    for f in os.listdir(OUTPUT_DIR):
+        if f.startswith('web-repe'):
+            shutil.copyfile(f'{OUTPUT_DIR}/{f}', f'/home/fero/wspace/fhweb/code/frontend/src/data/{f}')

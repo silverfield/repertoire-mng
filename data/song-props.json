@@ -1,396 +1,1088 @@
 [
     {
         "name": "DS - Brothers in arms",
-        "tags": ["relaxed", "dsmk", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "dsmk",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - Down to the waterline",
-        "tags": ["guitary"],
-        "webrepe": false
+        "tags": [
+            "guitary"
+        ],
+        "webrepe": false,
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "DS - Going home",
-        "tags": ["dsmk", "guitary", "rocky", "instrumental"],
+        "tags": [
+            "dsmk",
+            "guitary",
+            "rocky",
+            "instrumental"
+        ],
         "webrepe": false,
-        "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf"
+        "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf",
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "DS - Money for nothing",
-        "tags": ["dsmk", "rocky", "guitary", "famous"],
-        "webrepe": false
+        "tags": [
+            "dsmk",
+            "rocky",
+            "guitary",
+            "famous"
+        ],
+        "webrepe": false,
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - On every street",
-        "tags": ["dsmk", "relaxed", "guitary", "acoustic"]
+        "tags": [
+            "dsmk",
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - Private investigations",
-        "tags": ["dsmk", "relaxed", "acoustic", "songwrite", "guitary"]
+        "tags": [
+            "dsmk",
+            "relaxed",
+            "acoustic",
+            "songwrite",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - Romeo and Juliet",
-        "tags": ["dsmk", "relaxed", "acoustic", "famous"]
+        "tags": [
+            "dsmk",
+            "relaxed",
+            "acoustic",
+            "famous"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - Six blade knife",
-        "tags": ["dsmk", "rocky", "acoustic", "guitary"]
+        "tags": [
+            "dsmk",
+            "rocky",
+            "acoustic",
+            "guitary"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "DS - Sultans of swing",
-        "tags": ["famous", "dsmk", "rocky", "acoustic", "guitary"]
+        "tags": [
+            "famous",
+            "dsmk",
+            "rocky",
+            "acoustic",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - Telegraph road",
-        "tags": ["dsmk", "rocky", "guitary"]
+        "tags": [
+            "dsmk",
+            "rocky",
+            "guitary"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "DS - Tunnel of love",
-        "tags": ["dsmk", "rocky", "guitary"]
+        "tags": [
+            "dsmk",
+            "rocky",
+            "guitary"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "DS - Walk of life",
-        "tags": ["dsmk", "rocky"],
-        "webrepe": false
+        "tags": [
+            "dsmk",
+            "rocky"
+        ],
+        "webrepe": false,
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "DS - Where do you think you're going",
-        "tags": ["rocky", "acoustic", "relaxed", "guitary"]
+        "tags": [
+            "rocky",
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "EC - Layla",
-        "tags": ["famous", "rhythm", "acoustic", "relaxed", "guitary"]
+        "tags": [
+            "famous",
+            "rhythm",
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - African Bird",
-        "tags": ["relaxed", "guitary"]
+        "tags": [
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Ocean shore",
-        "tags": ["relaxed", "guitary", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Sticks in the water",
-        "tags": ["relaxed", "guitary", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Bluff",
-        "tags": ["acoustic", "relaxed", "guitary"]
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Calling at Newport",
-        "tags": ["rocky", "acoustic", "guitary"]
+        "tags": [
+            "rocky",
+            "acoustic",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Daily ride",
-        "tags": ["rocky", "acoustic", "relaxed", "guitary"]
+        "tags": [
+            "rocky",
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Everyday",
-        "tags": ["rocky", "acoustic", "guitary"]
+        "tags": [
+            "rocky",
+            "acoustic",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Fargo and Pelgrim",
-        "tags": ["acoustic", "relaxed", "guitary", "songwrite"]
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary",
+            "songwrite"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Happy Home",
-        "tags": ["rhythm", "acoustic"]
+        "tags": [
+            "rhythm",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Hey dad",
-        "tags": ["acoustic", "relaxed", "guitary", "songwrite"]
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary",
+            "songwrite"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Let's go fail",
-        "tags": ["rhythm", "acoustic"]
+        "tags": [
+            "rhythm",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Summer breeze",
-        "tags": ["acoustic", "relaxed", "guitary"]
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Summer tune",
-        "tags": ["acoustic", "relaxed", "guitary", "instrumental"]
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary",
+            "instrumental"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "FH - Vices",
-        "tags": ["acoustic", "relaxed", "guitary"]
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Are we in trouble now",
-        "tags": ["relaxed", "guitary"]
+        "tags": [
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Boom like that",
-        "tags": ["rocky", "guitary", "acoustic"]
+        "tags": [
+            "rocky",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Darling pretty",
-        "tags": ["rocky", "guitary", "acoustic"]
-    },
-    {
-        "name": "MK - Darling pretty - rythm intro",
-        "webrepe": false,
-        "tags": ["rocky", "guitary", "acoustic"]
+        "tags": [
+            "rocky",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "MK - Davil Baby",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Going home 96",
-        "tags": ["dsmk", "rocky", "guitary"],
-        "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf"
+        "tags": [
+            "dsmk",
+            "rocky",
+            "guitary"
+        ],
+        "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf",
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "MK - Golden Heart",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Heart full of holes",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Hillfarmer's blues",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - I dug up a diamon",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "MK - Local hero",
-        "tags": ["dsmk", "relaxed", "guitary"]
+        "tags": [
+            "dsmk",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Piper to the end",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Sailing to Philadelphia",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "MK - Speedway At Nazareth",
-        "tags": ["rocky", "guitary", "dsmk"]
+        "tags": [
+            "rocky",
+            "guitary",
+            "dsmk"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "MK - What it is",
-        "tags": ["rocky", "guitary", "dsmk"]
+        "tags": [
+            "rocky",
+            "guitary",
+            "dsmk"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "Mike Oldfield - Moonlight shadow",
         "webrepe": false,
-        "tags": ["rocky", "guitary", "famous"]
+        "tags": [
+            "rocky",
+            "guitary",
+            "famous"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "Notting Hillbillies - Feel Like Going Home",
-        "tags": ["relaxed", "guitary", "acoustic", "singing"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic",
+            "singing"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "PF - Coming Back To Life",
-        "tags": ["relaxed", "guitary", "rocky"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "rocky"
+        ],
+        "versions": [
+            "bt"
+        ]
     },
     {
         "name": "PF - Lost For Words",
         "webrepe": false,
-        "tags": ["acoustic", "guitary", "rocky"]
+        "tags": [
+            "acoustic",
+            "guitary",
+            "rocky"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "A Great Big World & Christina Aguilera - Say Something",
-        "tags": ["famous", "relaxed", "acoustic", "singing"]
+        "tags": [
+            "famous",
+            "relaxed",
+            "acoustic",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "A Star is Born - Always Remember Us This Way",
-        "tags": ["famous", "singing", "acoustic"]
+        "tags": [
+            "famous",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "A Star is Born - Maybe Its Time",
-        "tags": ["famous", "singing", "acoustic"]
+        "tags": [
+            "famous",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "A Star is Born - Shallow",
-        "tags": ["famous", "singing", "acoustic"]
+        "tags": [
+            "famous",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Ben E King - Stand By Me",
-        "tags": ["famous", "singing", "rhythm", "acoustic"]
+        "tags": [
+            "famous",
+            "singing",
+            "rhythm",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Chris Isaak - Wicked Game",
-        "tags": ["famous", "singing", "acoustic", "relaxed"]
+        "tags": [
+            "famous",
+            "singing",
+            "acoustic",
+            "relaxed"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Damien Rice - I Dont Want To Change You",
         "webrepe": false,
-        "tags": ["famous", "singing", "acoustic"]
+        "tags": [
+            "famous",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Dire Straits - You And Your Friend",
-        "tags": ["relaxed", "dsmk", "guitary"]
+        "tags": [
+            "relaxed",
+            "dsmk",
+            "guitary"
+        ],
+        "versions": [
+            "bt",
+            "nbt"
+        ]
     },
     {
         "name": "Ed Sheeran - I See Fire",
-        "tags": ["famous", "rhythm", "guitary"]
+        "tags": [
+            "famous",
+            "rhythm",
+            "guitary"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Ed Sheeran - Perfect",
-        "tags": ["famous", "relaxed", "singing"]
+        "tags": [
+            "famous",
+            "relaxed",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Ed Sheeran - Thinking Out Loud",
-        "tags": ["famous", "rhythm", "singing"]
+        "tags": [
+            "famous",
+            "rhythm",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Eva Cassidy - Fields of Gold",
-        "tags": ["relaxed", "singing", "acoustic"]
+        "tags": [
+            "relaxed",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "FH - In style",
-        "tags": ["relaxed", "songwrite", "acoustic"]
+        "tags": [
+            "relaxed",
+            "songwrite",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Hiatt - Have a little faith in me",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Hughes - Calon lan",
-        "tags": ["relaxed", "instrumental"]
+        "tags": [
+            "relaxed",
+            "instrumental"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Age of Worry",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Changing",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Crossroads",
-        "tags": ["rocky", "guitary"]
+        "tags": [
+            "rocky",
+            "guitary"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Dear Marie",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": [
+            "relaxed",
+            "guitary",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Edge of Desire",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - I Guess I Just Feel Like",
-        "tags": ["famous", "relaxed", "acoustic", "guitary"]
+        "tags": [
+            "famous",
+            "relaxed",
+            "acoustic",
+            "guitary"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - In the Blood",
-        "tags": ["famous", "acoustic", "rhythm"]
+        "tags": [
+            "famous",
+            "acoustic",
+            "rhythm"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Never on the Day You Leave",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Something Like Olivia",
-        "tags": ["rhythm", "acoustic"]
+        "tags": [
+            "rhythm",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Stop This Train",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - The Heart Of Life",
-        "tags": ["relaxed", "acoustic"]
+        "tags": [
+            "relaxed",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Who says",
-        "tags": ["rhythm", "acoustic"]
+        "tags": [
+            "rhythm",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "John Mayer - Your Body Is a Wonderland",
-        "tags": ["rhythm", "acoustic"]
+        "tags": [
+            "rhythm",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Leonard Cohen - Hallelujah",
-        "tags": ["relaxed", "famous", "singing", "acoustic"]
+        "tags": [
+            "relaxed",
+            "famous",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Linking Park - The Messenger",
-        "tags": ["relaxed", "famous", "singing", "acoustic"]
+        "tags": [
+            "relaxed",
+            "famous",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - Belle Star",
-        "tags": ["rocky", "singing", "acoustic"]
+        "tags": [
+            "rocky",
+            "singing",
+            "acoustic"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - Get lucky",
-        "tags": ["relaxed", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - Heart of oak",
-        "tags": ["relaxed", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - Lights of Taormina",
-        "tags": ["relaxed", "acoustic", "songwrite", "guitary"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite",
+            "guitary"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - Matchstick Man",
-        "tags": ["relaxed", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - My heart has never changed",
-        "tags": ["relaxed", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - One Song at a Time",
-        "tags": ["relaxed", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Mark Knopfler - Ragpicker's dream",
-        "tags": ["relaxed", "acoustic", "songwrite"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Ray Charles - Hit The Road Jack (remastered)",
-        "tags": ["rhythm", "acoustic", "famous"],
-        "pdf": null
+        "tags": [
+            "rhythm",
+            "acoustic",
+            "famous"
+        ],
+        "pdf": null,
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Simon & Garfunkel - The Boxer",
-        "tags": ["relaxed", "acoustic", "songwrite", "singing"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "songwrite",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Simon And Garfunkel - Sound Of Silence",
-        "tags": ["relaxed", "acoustic", "famous", "singing"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "famous",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "The Greatest Showman - A Million Dreams",
-        "tags": ["acoustic", "famous", "singing"]
+        "tags": [
+            "acoustic",
+            "famous",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "The Greatest Showman - From now on",
-        "tags": ["acoustic", "famous", "singing"]
+        "tags": [
+            "acoustic",
+            "famous",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "The Greatest Showman - This Is Me",
-        "tags": ["relaxed", "acoustic", "famous", "singing"]
+        "tags": [
+            "relaxed",
+            "acoustic",
+            "famous",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Tina Turner - Proud Mary",
-        "tags": ["rhythm", "acoustic", "famous", "singing"]
+        "tags": [
+            "rhythm",
+            "acoustic",
+            "famous",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Tommy Emmanuel - Those Who Wait",
-        "tags": ["instrumental", "relaxed", "acoustic", "guitary"],
-        "pdf": "PREFIX/music/noty/tommy emmanuel-those who wait.pdf"
+        "tags": [
+            "instrumental",
+            "relaxed",
+            "acoustic",
+            "guitary"
+        ],
+        "pdf": "PREFIX/music/noty/tommy emmanuel-those who wait.pdf",
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Doris Day - Dream A Little Dream of Me",
         "tags": [],
-        "webrepe": false
+        "webrepe": false,
+        "versions": [
+            "nbt"
+        ]
     },
     {
         "name": "Fools Garden - Lemon Tree",
         "tags": [],
-        "webrepe": false
+        "webrepe": false,
+        "versions": [
+            "nbt"
+        ]
     }
 ]
