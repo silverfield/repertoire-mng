@@ -66,11 +66,11 @@
     },
     {
         "name": "FH - Ocean shore",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": ["relaxed", "guitary", "acoustic", "songwrite"]
     },
     {
         "name": "FH - Sticks in the water",
-        "tags": ["relaxed", "guitary", "acoustic"]
+        "tags": ["relaxed", "guitary", "acoustic", "songwrite"]
     },
     {
         "name": "FH - Bluff",
@@ -90,7 +90,7 @@
     },
     {
         "name": "FH - Fargo and Pelgrim",
-        "tags": ["acoustic", "relaxed", "guitary"]
+        "tags": ["acoustic", "relaxed", "guitary", "songwrite"]
     },
     {
         "name": "FH - Happy Home",
@@ -98,7 +98,7 @@
     },
     {
         "name": "FH - Hey dad",
-        "tags": ["acoustic", "relaxed", "guitary"]
+        "tags": ["acoustic", "relaxed", "guitary", "songwrite"]
     },
     {
         "name": "FH - Let's go fail",

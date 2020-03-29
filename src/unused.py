@@ -28,5 +28,19 @@ def create_pl_all():
         f.write(s)
 
 
+def add_versions():
+    with open(f'{DATA_DIR}/pl-all.json', 'r') as f:
+        data = json.loads(f.read())
+
+    new_data = []
+    for d in data:
+        d['versions'] = ['bt', 'nbt']
+        new_data.append(d)
+
+    s = json.dumps(new_data, indent=4)
+    with open(f'{DATA_DIR}/pl-all.json', 'w') as f:
+        f.write(s)
+
+
 if __name__ == "__main__":
     create_pl_all()

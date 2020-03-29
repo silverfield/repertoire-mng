@@ -41,7 +41,7 @@ def make_repe_for_web(pl='pl-all'):
                 'nbt': not is_bt(item),
                 'tags': tags
             }
-            key = get_full_name(item).lower()
+            key = f'{artist}_{name}'.lower()
 
             if key in web_repe:
                 web_repe[key]['bt'] = new_item['bt'] or web_repe[key]['bt']
@@ -50,7 +50,7 @@ def make_repe_for_web(pl='pl-all'):
             else:
                 web_repe[key] = new_item
 
-        with open(f'{OUTPUT_DIR}/web_repe.json', 'w') as fout:
+        with open(f'{OUTPUT_DIR}/web-repe-{pl}.json', 'w') as fout:
             fout.write(json.dumps(list(web_repe.values()), indent=4))
 
 
