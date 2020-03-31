@@ -69,7 +69,7 @@
             "dsmk",
             "relaxed",
             "acoustic",
-            "songwrite",
+            "songwriter",
             "guitary"
         ],
         "versions": [
@@ -194,7 +194,7 @@
             "relaxed",
             "guitary",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "bt",
@@ -207,7 +207,7 @@
             "relaxed",
             "guitary",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "bt",
@@ -269,7 +269,7 @@
             "acoustic",
             "relaxed",
             "guitary",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "bt",
@@ -293,7 +293,7 @@
             "acoustic",
             "relaxed",
             "guitary",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "bt",
@@ -700,7 +700,7 @@
         "name": "FH - In style",
         "tags": [
             "relaxed",
-            "songwrite",
+            "songwriter",
             "acoustic"
         ],
         "versions": [
@@ -901,7 +901,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "nbt"
@@ -912,7 +912,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "nbt"
@@ -923,7 +923,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite",
+            "songwriter",
             "guitary"
         ],
         "versions": [
@@ -935,7 +935,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "nbt"
@@ -946,7 +946,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "nbt"
@@ -957,7 +957,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "nbt"
@@ -968,7 +968,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite"
+            "songwriter"
         ],
         "versions": [
             "nbt"
@@ -991,7 +991,7 @@
         "tags": [
             "relaxed",
             "acoustic",
-            "songwrite",
+            "songwriter",
             "singing"
         ],
         "versions": [
