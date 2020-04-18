@@ -217,7 +217,7 @@
             "nbt",
             "bt"
         ],
-        "loop": null
+        "loop": 95
     },
     {
         "name": "FH - African Bird",
@@ -229,7 +229,7 @@
             "bt",
             "nbt"
         ],
-        "loop": null
+        "loop": 99
     },
     {
         "name": "FH - Ocean shore",
@@ -257,7 +257,7 @@
             "bt",
             "nbt"
         ],
-        "loop": null
+        "loop": 94
     },
     {
         "name": "FH - Bluff",
@@ -283,7 +283,7 @@
             "bt",
             "nbt"
         ],
-        "loop": 37
+        "loop": [37, 98]
     },
     {
         "name": "FH - Daily ride",
@@ -324,7 +324,7 @@
             "bt",
             "nbt"
         ],
-        "loop": null
+        "loop": 97
     },
     {
         "name": "FH - Happy Home",
@@ -350,7 +350,7 @@
             "bt",
             "nbt"
         ],
-        "loop": null
+        "loop": 96
     },
     {
         "name": "FH - Let's go fail",
@@ -426,7 +426,7 @@
             "bt",
             "nbt"
         ],
-        "loop": null
+        "loop": 93
     },
     {
         "name": "MK - Boom like that",

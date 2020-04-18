@@ -17,7 +17,7 @@ REPE_FOLDER = f'{PREFIX}/music/repertoire'
 
 def mkdir(d):
     if not os.path.exists(d):
-        os.mkdir(d)
+        os.makedirs(d)
 mkdir(DATA_DIR)
 mkdir(OUTPUT_DIR)
 

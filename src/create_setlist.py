@@ -18,7 +18,7 @@ def create_repe(name, create_subsections=False, confirm_upload=True, upload=True
             for v in p['versions']:
                 items.append(f"{p['name']} - {v}")
 
-        create_repe_from_items(items, 'ALL', confirm_upload=confirm_upload, upload=upload)
+        return create_repe_from_items(items, 'ALL', confirm_upload=confirm_upload, upload=upload)
 
     json_path = f"{DATA_DIR}/busk-pls/{name}.json"
 
@@ -34,13 +34,13 @@ def create_repe(name, create_subsections=False, confirm_upload=True, upload=True
                 items, 
                 name=f'{name}-{section_name}', 
                 confirm_upload=confirm_upload,
-                subdir=name,
+                parent=name,
                 upload=upload
             )
 
     create_repe_from_items(all_items, name, confirm_upload=confirm_upload, upload=upload)
 
-def create_repe_from_items(items, name, confirm_upload=True, subdir=None, upload=True):
+def create_repe_from_items(items, name, confirm_upload=True, parent=None, upload=True):
     new_items = []
     for item in items:
         item_props = get_song_props(item)
@@ -52,7 +52,7 @@ def create_repe_from_items(items, name, confirm_upload=True, subdir=None, upload
     
     items = new_items
 
-    subdir = f'/{subdir}' if subdir is not None else ''
+    subdir = f'/{parent}' if parent is not None else ''
     output_dir = f'{OUTPUT_DIR}{subdir}/{name}'
     mkdir(output_dir)
 
@@ -87,7 +87,7 @@ def create_repe_from_items(items, name, confirm_upload=True, subdir=None, upload
             print(confirm_upload)
             input('\nProceed with upload? Press any key to continue...')
         print('\n uploading to Drive...')
-        upload_to_drive(output_dir, name)
+        upload_to_drive(output_dir, name, parent)
 
     print('\nOK')
 
@@ -223,7 +223,7 @@ def get_pdf_paths(items):
 
     return pdfs
 
-def upload_to_drive(output_dir, name):
+def upload_to_drive(output_dir, name, parent=None):
     print('Getting Gdrive service...')
     service = gapi.get_gdrive_service()
 
@@ -232,12 +232,21 @@ def upload_to_drive(output_dir, name):
     repe_folder = gapi.gdrive_query(service, 'repertoire', is_folder=True)[0]
     repe_folder_id = repe_folder['id']
 
+    if parent:
+        print(f'Checking if parent folder {parent} folder already exists...')
+        parent_folder = gapi.create_folder_if_not_exist(service, parent, repe_folder_id)
+        parent_folder_id = parent_folder['id']
+    else:
+        parent_folder_id = repe_folder_id
+
     # create a new folder there with the name of the setlist
     print(f'Checking if {name} folder already exists...')
-    folder = gapi.create_folder_if_not_exist(service, name, repe_folder_id)
+    folder = gapi.create_folder_if_not_exist(service, name, parent_folder_id)
 
     # upload all the files to it
     for f in os.listdir(output_dir):
+        if os.path.isdir(f'{output_dir}/{f}'):
+            continue
         print(f'- uploading {f}...')
         gapi.create_or_update_file(service, f"{output_dir}/{f}", f, folder['id'])
 
@@ -249,16 +258,16 @@ def upload_to_drive(output_dir, name):
     
     with open(f'{output_dir}/{name}.json') as f:
         data = json.loads(f.read())
-        for item in data:
+        for item in data.values():
             if 'mp3' not in item or item['mp3'] is None:
                 continue
 
             mp3_fpath = item['mp3'].strip()
             print(f'- uploading {mp3_fpath}...')
-            parent_id = bt_folder_id if mp3_fpath.split('/')[-2] == 'bts' else fs_folder_id
-            gapi.create_or_update_file(service, mp3_fpath, mp3_fpath.split('/')[-1], parent_id, update=False)
+            mp3_parent_id = bt_folder_id if mp3_fpath.split('/')[-2] == 'bts' else fs_folder_id
+            gapi.create_or_update_file(service, mp3_fpath, mp3_fpath.split('/')[-1], mp3_parent_id, update=False)
 
 
 if __name__ == "__main__":
-    create_repe('pl-2020', create_subsections=False, confirm_upload=False, upload=False)
-    # create_repe(None, create_subsections=True, confirm_upload=False)
+    # create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=True)
+    create_repe(None, create_subsections=False, confirm_upload=False, upload=False)
