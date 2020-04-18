@@ -10,17 +10,19 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Down to the waterline",
         "tags": [
             "guitary"
         ],
-        "webrepe": false,
+        "used": false,
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Going home",
@@ -30,11 +32,12 @@
             "rocky",
             "instrumental"
         ],
-        "webrepe": false,
+        "used": false,
         "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf",
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Money for nothing",
@@ -44,11 +47,12 @@
             "guitary",
             "famous"
         ],
-        "webrepe": false,
+        "used": false,
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 16
     },
     {
         "name": "DS - On every street",
@@ -61,7 +65,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Private investigations",
@@ -75,7 +80,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Romeo and Juliet",
@@ -88,7 +94,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "DS - Six blade knife",
@@ -100,7 +107,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 8
     },
     {
         "name": "DS - Sultans of swing",
@@ -114,7 +122,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Telegraph road",
@@ -125,7 +134,8 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Tunnel of love",
@@ -136,7 +146,8 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Walk of life",
@@ -144,11 +155,12 @@
             "dsmk",
             "rocky"
         ],
-        "webrepe": false,
+        "used": false,
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "DS - Where do you think you're going",
@@ -161,7 +173,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 14
     },
     {
         "name": "EC - Layla",
@@ -175,7 +188,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 12
     },
     {
         "name": "FH - African Bird",
@@ -186,7 +200,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Ocean shore",
@@ -199,7 +214,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Sticks in the water",
@@ -212,7 +228,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Bluff",
@@ -224,7 +241,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Calling at Newport",
@@ -236,7 +254,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 37
     },
     {
         "name": "FH - Daily ride",
@@ -249,7 +268,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Everyday",
@@ -261,7 +281,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Fargo and Pelgrim",
@@ -274,7 +295,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Happy Home",
@@ -285,7 +307,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Hey dad",
@@ -298,7 +321,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Let's go fail",
@@ -309,7 +333,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Summer breeze",
@@ -321,7 +346,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "FH - Summer tune",
@@ -334,7 +360,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 11
     },
     {
         "name": "FH - Vices",
@@ -346,7 +373,20 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
+    },
+    {
+        "name": "FH - When this is done",
+        "tags": [
+            "acoustic",
+            "relaxed",
+            "guitary"
+        ],
+        "versions": [
+            "nbt"
+        ],
+        "loop": null
     },
     {
         "name": "MK - Are we in trouble now",
@@ -357,7 +397,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Boom like that",
@@ -369,7 +410,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Darling pretty",
@@ -380,7 +422,8 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Davil Baby",
@@ -392,7 +435,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Going home 96",
@@ -404,7 +448,8 @@
         "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf",
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Golden Heart",
@@ -416,7 +461,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "MK - Heart full of holes",
@@ -427,7 +473,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 29
     },
     {
         "name": "MK - Hillfarmer's blues",
@@ -439,7 +486,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - I dug up a diamon",
@@ -450,7 +498,8 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Local hero",
@@ -462,7 +511,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Piper to the end",
@@ -474,7 +524,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - Sailing to Philadelphia",
@@ -486,7 +537,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 24
     },
     {
         "name": "MK - Speedway At Nazareth",
@@ -497,7 +549,8 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "MK - What it is",
@@ -508,11 +561,12 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "Mike Oldfield - Moonlight shadow",
-        "webrepe": false,
+        "used": false,
         "tags": [
             "rocky",
             "guitary",
@@ -520,7 +574,8 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "Notting Hillbillies - Feel Like Going Home",
@@ -533,7 +588,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "PF - Coming Back To Life",
@@ -544,11 +600,12 @@
         ],
         "versions": [
             "bt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "PF - Lost For Words",
-        "webrepe": false,
+        "used": false,
         "tags": [
             "acoustic",
             "guitary",
@@ -557,7 +614,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": null
     },
     {
         "name": "A Great Big World & Christina Aguilera - Say Something",
@@ -569,7 +627,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "A Star is Born - Always Remember Us This Way",
@@ -580,7 +639,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 21
     },
     {
         "name": "A Star is Born - Maybe Its Time",
@@ -591,7 +651,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "A Star is Born - Shallow",
@@ -602,7 +663,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Ben E King - Stand By Me",
@@ -614,7 +676,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Chris Isaak - Wicked Game",
@@ -626,11 +689,12 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 22
     },
     {
         "name": "Damien Rice - I Dont Want To Change You",
-        "webrepe": false,
+        "used": false,
         "tags": [
             "famous",
             "singing",
@@ -638,7 +702,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Dire Straits - You And Your Friend",
@@ -650,7 +715,8 @@
         "versions": [
             "bt",
             "nbt"
-        ]
+        ],
+        "loop": 28
     },
     {
         "name": "Ed Sheeran - I See Fire",
@@ -661,7 +727,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 18
     },
     {
         "name": "Ed Sheeran - Perfect",
@@ -672,7 +739,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 3
     },
     {
         "name": "Ed Sheeran - Thinking Out Loud",
@@ -683,7 +751,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 2
     },
     {
         "name": "Eva Cassidy - Fields of Gold",
@@ -694,7 +763,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "FH - In style",
@@ -705,7 +775,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Hiatt - Have a little faith in me",
@@ -715,7 +786,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Hughes - Calon lan",
@@ -725,7 +797,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - Age of Worry",
@@ -735,7 +808,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - Changing",
@@ -745,7 +819,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - Crossroads",
@@ -755,7 +830,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 26
     },
     {
         "name": "John Mayer - Dear Marie",
@@ -766,7 +842,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 33
     },
     {
         "name": "John Mayer - Edge of Desire",
@@ -776,7 +853,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - I Guess I Just Feel Like",
@@ -788,7 +866,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 36
     },
     {
         "name": "John Mayer - In the Blood",
@@ -799,7 +878,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 9
     },
     {
         "name": "John Mayer - Never on the Day You Leave",
@@ -809,7 +889,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - Something Like Olivia",
@@ -819,7 +900,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 34
     },
     {
         "name": "John Mayer - Stop This Train",
@@ -829,7 +911,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - The Heart Of Life",
@@ -839,7 +922,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - Who says",
@@ -849,7 +933,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "John Mayer - Your Body Is a Wonderland",
@@ -859,7 +944,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 27
     },
     {
         "name": "Leonard Cohen - Hallelujah",
@@ -871,7 +957,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Linking Park - The Messenger",
@@ -883,7 +970,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 13
     },
     {
         "name": "Mark Knopfler - Belle Star",
@@ -894,7 +982,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Mark Knopfler - Get lucky",
@@ -905,7 +994,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Mark Knopfler - Heart of oak",
@@ -916,7 +1006,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Mark Knopfler - Lights of Taormina",
@@ -928,7 +1019,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 1
     },
     {
         "name": "Mark Knopfler - Matchstick Man",
@@ -939,7 +1031,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Mark Knopfler - My heart has never changed",
@@ -950,7 +1043,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Mark Knopfler - One Song at a Time",
@@ -961,7 +1055,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Mark Knopfler - Ragpicker's dream",
@@ -972,7 +1067,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Ray Charles - Hit The Road Jack (remastered)",
@@ -984,7 +1080,8 @@
         "pdf": null,
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Simon & Garfunkel - The Boxer",
@@ -996,7 +1093,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Simon And Garfunkel - Sound Of Silence",
@@ -1008,7 +1106,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "The Greatest Showman - A Million Dreams",
@@ -1019,7 +1118,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "The Greatest Showman - From now on",
@@ -1030,7 +1130,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 23
     },
     {
         "name": "The Greatest Showman - This Is Me",
@@ -1042,7 +1143,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Tina Turner - Proud Mary",
@@ -1054,7 +1156,8 @@
         ],
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Tommy Emmanuel - Those Who Wait",
@@ -1067,22 +1170,34 @@
         "pdf": "PREFIX/music/noty/tommy emmanuel-those who wait.pdf",
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 0
     },
     {
         "name": "Doris Day - Dream A Little Dream of Me",
         "tags": [],
-        "webrepe": false,
+        "used": false,
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 7
     },
     {
         "name": "Fools Garden - Lemon Tree",
         "tags": [],
-        "webrepe": false,
+        "used": false,
         "versions": [
             "nbt"
-        ]
+        ],
+        "loop": 32
+    },
+    {
+        "name": "3 Doors Down - Here Without You",
+        "tags": [],
+        "used": false,
+        "versions": [
+            "nbt"
+        ],
+        "loop": 4
     }
 ]

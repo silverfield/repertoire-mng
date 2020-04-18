@@ -42,5 +42,27 @@ def add_versions():
         f.write(s)
 
 
+def add_loop_pos():
+    with open(f'{DATA_DIR}/song-props.json', 'r') as f:
+        data = json.loads(f.read())
+
+    with open(f'{DATA_DIR}/loop-pos.json', 'r') as f:
+        looppos = json.loads(f.read())
+
+    looppos = {
+        get_song_props(k)['name']: looppos[k] for k in looppos
+    }
+
+    for d in data:
+        if d['name'] in looppos:
+            d['loop'] = looppos[d['name']]
+        else:
+            d['loop'] = None
+
+    s = json.dumps(data, indent=4)
+    with open(f'{DATA_DIR}/song-props.json', 'w') as f:
+        f.write(s)
+
+
 if __name__ == "__main__":
-    add_versions()
+    add_loop_pos()

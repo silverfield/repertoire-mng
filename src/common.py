@@ -63,8 +63,9 @@ def get_song_props(item):
     print(json.dumps({
         "name": item,
         "tags": [],
-        "webrepe": False
+        "used": True,
+        "versions": ['nbt'],
+        "loop": None
     }, indent=4))
 
     raise KeyError(err_msg)
-
