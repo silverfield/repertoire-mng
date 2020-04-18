@@ -44,6 +44,9 @@ def is_bt(item):
 
 with open(f'{DATA_DIR}/song-props.json', 'r') as f:
     PROPS = json.loads(f.read())
+    if any(len(i['tags']) == 0 for i in PROPS):
+        no_tags_props = [i['name'] for i in PROPS if len(i['tags']) == 0]
+        raise ValueError(f'Tags not specified for {no_tags_props}')
     PROPS = {i['name'].lower(): i for i in PROPS}
 
 def get_song_props(item):

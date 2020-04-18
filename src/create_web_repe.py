@@ -3,9 +3,10 @@ from common import *
 
 def make_repe_for_web(pl=None):
     if pl is None:
-        data = [p['name'] for p in PROPS]
+        data = [p['name'] for p in PROPS.values()]
+        pl = 'all'
     else:
-        with open(f'{DATA_DIR}/{pl}.json', 'r') as f:
+        with open(f'{DATA_DIR}/web-pls/{pl}.json', 'r') as f:
             data = json.loads(f.read())
 
     web_repe = {}
@@ -59,9 +60,9 @@ def make_repe_for_web(pl=None):
 
 if __name__ == "__main__":
     make_repe_for_web()  # all songs in song-props
-    make_repe_for_web('pl-web-gig-background-nbt')
-    make_repe_for_web('pl-web-gig-fri-pub-nbt')
-    make_repe_for_web('pl-web-gig-originals')
+    make_repe_for_web('gig-background-nbt')
+    make_repe_for_web('gig-fri-pub-nbt')
+    make_repe_for_web('gig-originals')
 
     import shutil
     for f in os.listdir(OUTPUT_DIR):

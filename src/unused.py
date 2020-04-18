@@ -63,6 +63,17 @@ def add_loop_pos():
     with open(f'{DATA_DIR}/song-props.json', 'w') as f:
         f.write(s)
 
+def rework_busk_pl():
+    with open(f'{DATA_DIR}/pl-2020.json', 'r') as f:
+        data = json.loads(f.read())
+
+    new_data = {}
+    for s in data:
+        new_data[s['section']] = [i['name'] for i in s['items']]
+
+    s = json.dumps(new_data, indent=4)
+    with open(f'{DATA_DIR}/pl-2020.json', 'w') as f:
+        f.write(s)
 
 if __name__ == "__main__":
-    add_loop_pos()
+    rework_busk_pl()
