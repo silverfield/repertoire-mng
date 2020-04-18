@@ -16,9 +16,10 @@ def create_repe(name, create_subsections=False, confirm_upload=True, upload=True
                 continue
 
             for v in p['versions']:
-                items.append(f"{p['name']} - {v}")
+                version = ' - BT' if v == 'bt' else ''
+                items.append(f"{p['name']}{version}")
 
-        return create_repe_from_items(items, 'ALL', confirm_upload=confirm_upload, upload=upload)
+        return create_repe_from_items(items, 'pl-ALL', confirm_upload=confirm_upload, upload=upload)
 
     json_path = f"{DATA_DIR}/busk-pls/{name}.json"
 
@@ -270,4 +271,4 @@ def upload_to_drive(output_dir, name, parent=None):
 
 if __name__ == "__main__":
     # create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=True)
-    create_repe(None, create_subsections=False, confirm_upload=False, upload=False)
+    create_repe(None, create_subsections=False, confirm_upload=False, upload=True)

@@ -41,18 +41,13 @@ def make_repe_for_web(pl=None):
         new_item = {
             'artist': artist,
             'name': name,
-            'bt': is_bt(item) or ('bt' in item_props['versions']),
-            'nbt': not is_bt(item) or ('nbt' in item_props['versions']),
+            'bt': 'bt' in item_props['versions'],
+            'nbt': 'nbt' in item_props['versions'],
             'tags': tags
         }
         key = f'{artist}_{name}'.lower()
 
-        if key in web_repe:
-            web_repe[key]['bt'] = new_item['bt'] or web_repe[key]['bt']
-            web_repe[key]['nbt'] = new_item['nbt'] or web_repe[key]['nbt']
-            web_repe[key]['tags'] = list(set(new_item['tags'] + web_repe[key]['tags']))
-        else:
-            web_repe[key] = new_item
+        web_repe[key] = new_item
 
     with open(f'{OUTPUT_DIR}/web-repe-{pl}.json', 'w') as fout:
         fout.write(json.dumps(list(web_repe.values()), indent=4))
