@@ -270,5 +270,5 @@ def upload_to_drive(output_dir, name, parent=None):
 
 
 if __name__ == "__main__":
-    # create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=True)
-    create_repe(None, create_subsections=False, confirm_upload=False, upload=True)
+    create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=True)
+    # create_repe(None, create_subsections=False, confirm_upload=False, upload=True)

@@ -9,11 +9,17 @@ OUTPUT_DIR = f'{cur_dir}/../output'
 TYPE_BT = 'bt'
 TYPE_NBT = 'nbt'
 
+ON_LINUX = os.path.exists('/d')
+
 PREFIX = '/d'
-if not os.path.exists(PREFIX):
+if not ON_LINUX:
     PREFIX = 'G:'
 PDF_DIRS = [f'{PREFIX}/music/akordy/chords', f'{PREFIX}/music/akordy/fero-hajnovic']
 REPE_FOLDER = f'{PREFIX}/music/repertoire'
+
+WEBSITE_DATA_DIR = '/home/fero/wspace/fhweb/code/src/data'
+if not ON_LINUX:
+    WEBSITE_DATA_DIR = 'G:/wspace/fhweb/fhweb/src/data'
 
 def mkdir(d):
     if not os.path.exists(d):

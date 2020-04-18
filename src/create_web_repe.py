@@ -62,4 +62,4 @@ if __name__ == "__main__":
     import shutil
     for f in os.listdir(OUTPUT_DIR):
         if f.startswith('web-repe'):
-            shutil.copyfile(f'{OUTPUT_DIR}/{f}', f'/home/fero/wspace/fhweb/code/src/data/{f}')
+            shutil.copyfile(f'{OUTPUT_DIR}/{f}', f'{WEBSITE_DATA_DIR}/{f}')

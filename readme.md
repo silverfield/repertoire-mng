@@ -1,3 +1,11 @@
+### Setup
+
+Need to get credentials.json for Google drive in 
+
+console.developers.google.com
+- project setlist
+- login as Fero Musician
+
 ### Updating busking setlist
 
 To update busking setlist:
