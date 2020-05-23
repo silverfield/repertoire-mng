@@ -251,6 +251,9 @@ def upload_to_drive(output_dir, name, parent=None):
         print(f'- uploading {f}...')
         gapi.create_or_update_file(service, f"{output_dir}/{f}", f, folder['id'])
 
+    if parent is not None:
+        return
+
     # upload all MP3 files
     print(f'\nUploading the MP3 files...')
 
@@ -271,4 +274,4 @@ def upload_to_drive(output_dir, name, parent=None):
 
 if __name__ == "__main__":
     create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=True)
-    # create_repe(None, create_subsections=False, confirm_upload=False, upload=True)
+    create_repe(None, create_subsections=False, confirm_upload=False, upload=True)

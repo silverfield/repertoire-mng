@@ -195,11 +195,13 @@
         "name": "FH - How I'll remember Cardiff",
         "tags": [
             "acoustic",
-            "relaxed"
+            "relaxed",
+            "rhythm",
+            "guitary"
         ],
         "used": true,
-        "pdf": null,
         "versions": [
+            "bt",
             "nbt"
         ],
         "loop": null
