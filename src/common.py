@@ -36,6 +36,14 @@ COMMON_ABBRS = [
 ]
 COMMON_ABBRS.extend([abbr[::-1] for abbr in COMMON_ABBRS])
 
+def get_alternatives(s):
+    res = set([s])
+    for abbr in COMMON_ABBRS:
+        s_alt = s.replace(abbr[0].lower(), abbr[1].lower())
+        res.add(s_alt)
+
+    return list(res)
+
 def get_artist(item):
     return item.split(' - ')[0]
 
@@ -54,6 +62,7 @@ with open(f'{DATA_DIR}/song-props.json', 'r') as f:
         no_tags_props = [i['name'] for i in PROPS if len(i['tags']) == 0]
         raise ValueError(f'Tags not specified for {no_tags_props}')
     PROPS = {i['name'].lower(): i for i in PROPS}
+    # print(PROPS)
 
 def get_song_props(item):
     key = get_full_name(item).lower()
@@ -61,8 +70,7 @@ def get_song_props(item):
     if key in PROPS:
         return PROPS[key]
     else:
-        for abbr in COMMON_ABBRS:
-            key_rep = key.replace(abbr[0].lower(), abbr[1].lower())
+        for key_rep in get_alternatives(key):
             if key_rep in PROPS:
                 return PROPS[key_rep]
 

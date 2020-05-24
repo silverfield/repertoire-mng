@@ -101,6 +101,8 @@ def create_m3u(items, output_dir, name):
         s = ''
         s += 'bts/' if is_bt(item) else 'full-songs/'
         s += item
+        if 'btsuffix' in get_song_props(item):
+            s += f' - {get_song_props(item)["btsuffix"]}'
         s += '.mp3'
 
         fpath = f'{REPE_FOLDER}/{s}'
@@ -184,14 +186,15 @@ def _get_best(item, all_pdf_candidate_paths):
     best_pdf = None
 
     for pdf_path in all_pdf_candidate_paths:
-        pdf_name = pdf_path.split('/')[-1].split('.')[0].lower()
+        pdf_name = os.path.basename(pdf_path).lower()
         item_name = get_full_name(item).lower().strip()
 
-        dist = _get_dist(item_name, pdf_name)
+        for item_name_alt in get_alternatives(item_name):
+            dist = _get_dist(item_name_alt, pdf_name)
 
-        if dist < min_dist:
-            min_dist = dist
-            best_pdf = pdf_path
+            if dist < min_dist:
+                min_dist = dist
+                best_pdf = pdf_path
 
     if min_dist < MAX_DIST:
         return best_pdf
@@ -273,5 +276,6 @@ def upload_to_drive(output_dir, name, parent=None):
 
 
 if __name__ == "__main__":
-    create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=True)
-    create_repe(None, create_subsections=False, confirm_upload=False, upload=True)
+    upload = True
+    create_repe('pl-2020', create_subsections=True, confirm_upload=False, upload=upload)
+    create_repe(None, create_subsections=False, confirm_upload=False, upload=upload)

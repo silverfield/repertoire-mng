@@ -5,6 +5,7 @@ from googleapiclient.http import MediaFileUpload
 import pickle
 import os.path
 
+
 def get_gdrive_service():
     # If modifying these scopes, delete the file token.pickle.
     SCOPES = ['https://www.googleapis.com/auth/drive']
@@ -44,6 +45,7 @@ def gdrive_query(service, name, is_folder=False, parent_id=None):
     l = service.files().list(
         q=q,
         spaces='drive',
+        fields='*'
     ).execute()['files']
 
     return l
@@ -56,28 +58,38 @@ def create_or_update_file(service, fpath, name, parent_id, update=True):
     media = MediaFileUpload(fpath, resumable=True)
     files = gdrive_query(service, name, parent_id=parent_id)
 
+    def _create():
+        file_metadata['parents'] = [parent_id]
+
+        service.files().create(
+            body=file_metadata,
+            media_body=media,
+            fields='id'
+        ).execute()
+
     if len(files) > 0:
-        if update:
-            print(f'  - updating {name}...')
-            
-            return service.files().update(
+        online_size = int(files[0]['size'])
+        local_size = os.path.getsize(fpath)
+        size_mismatch = online_size != local_size
+        if size_mismatch:
+            print(f'local size: {local_size} != {online_size}')
+
+        if update or size_mismatch:
+            print(f'  - updating {name} {"because sizes do not match" if size_mismatch else ""}...')
+
+            service.files().delete(
                 fileId=files[0]['id'],
-                body=file_metadata,
-                media_body=media,
-                fields='id',
             ).execute()
+
+            _create()
         else:
             print(f'  - no action for {name} - present in drive and update set to False')
     else:
         print(f'  - creating {name}...')
 
-        file_metadata['parents'] = [parent_id]
+        # file_metadata['parents'] = [parent_id]
         
-        return service.files().create(
-            body=file_metadata,
-            media_body=media,
-            fields='id'
-        ).execute()
+        return _create()
 
 def create_folder_if_not_exist(service, name, parent_id):
     l = gdrive_query(service, name, is_folder=True, parent_id=parent_id)
@@ -94,3 +106,15 @@ def create_folder_if_not_exist(service, name, parent_id):
         folder = l[0]
 
     return folder
+
+if __name__ == "__main__":
+    print('Getting Gdrive service...')
+    service = get_gdrive_service()
+
+    print('Getting ID of the repertoire folder...')
+    test = gdrive_query(service, 'John Mayer - Stop This Train.mp3', is_folder=False)[0]
+
+    import pprint
+    pprint.pprint(test)
+
+    print(os.path.getsize('G:\music\\repertoire\\songs\\John Mayer - Stop This Train.mp3'))
