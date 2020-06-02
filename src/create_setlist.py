@@ -9,15 +9,11 @@ import sys
 from mutagen.mp3 import MP3
 
 def create_repe(name, create_subsections=False, confirm_upload=True, upload=True):
-    if name is None:
+    if name is None:  # we create one for all songs in song-props
         items = []
         for p in PROPS.values():
-            if 'used' in p and p['used'] == False:
-                continue
-
-            for v in p['versions']:
-                version = ' - BT' if v == 'bt' else ''
-                items.append(f"{p['name']}{version}")
+            version = ' - BT' if 'bt' in p['versions'] else ''  # by default, better to have BT in the setlist
+            items.append(f"{p['name']}{version}")
 
         return create_repe_from_items(items, 'pl-ALL', confirm_upload=confirm_upload, upload=upload)
 
@@ -39,6 +35,7 @@ def create_repe(name, create_subsections=False, confirm_upload=True, upload=True
                 upload=upload
             )
 
+    # create one for all items
     create_repe_from_items(all_items, name, confirm_upload=confirm_upload, upload=upload)
 
 def create_repe_from_items(items, name, confirm_upload=True, parent=None, upload=True):
@@ -61,7 +58,7 @@ def create_repe_from_items(items, name, confirm_upload=True, parent=None, upload
     print(f'Output dir is {output_dir}')
 
     print('\ncreating m3u...')
-    mp3_props = create_m3u(items, output_dir, name)
+    mp3_props = create_m3u(items, output_dir, name, has_parent=parent is not None)
 
     print('\ncreating PDF...')
     pdf_props = create_pdf(items, output_dir, name)
@@ -92,44 +89,49 @@ def create_repe_from_items(items, name, confirm_upload=True, parent=None, upload
 
     print('\nOK')
 
-def create_m3u(items, output_dir, name):
+def create_m3u(items, output_dir, name, has_parent):
     m3u_lines = ['#EXTM3U\n']
-    mp3_file_paths = []
     mp3_props = {}
 
-    for item in items:
-        s = ''
-        s += 'bts/' if is_bt(item) else 'full-songs/'
-        s += item
-        if 'btsuffix' in get_song_props(item):
-            s += f' - {get_song_props(item)["btsuffix"]}'
-        s += '.mp3'
+    bts_files = [f for f in os.listdir(f'{REPE_FOLDER}/bts') if f.endswith('.mp3')]
 
-        fpath = f'{REPE_FOLDER}/{s}'
-        if not os.path.exists(fpath):
-            print(f'MP3 for {item} not found in {fpath}')
-            mp3_props[item] = None
+    for item in items:
+        if is_bt(item):
+            best_bts = _get_best(item, bts_files)
+            if len(best_bts) == 0:
+                print(f'BT MP3 for {item} not found')
+                mp3_props[item] = []
+            else:
+                mp3_props[item] = [f'bts/{bt}' for bt in best_bts]                
         else:
-            mp3_file_paths.append(f'{fpath}\n')
-            mp3_props[item] = fpath
-            
+            mp3_props[item] = []
+
+        def _add_m3u(name_info, path):
+            song_props = get_song_props(item)
+            if song_props['loop'] is not None:
+                name_info += f' - {song_props["loop"]}'
+
+            m3u_lines.append(f'#EXTINF:1,{name_info}\n')
+            m3u_lines.append(f'{path}\n')
+
+        for fpath in mp3_props[item]:
             #remove ID3 tags
-            mp3 = MP3(fpath)
+            mp3 = MP3(f'{REPE_FOLDER}/{fpath}')
             try:
                 mp3.delete()
                 mp3.save()
             except:
                 pass
 
-        s = s.replace(' ', '%20')
+            fpath = f'../{fpath}'
+            if has_parent:
+                fpath = f'../{fpath}'
+            name_info = os.path.basename(fpath)
+            fpath = fpath.replace(' ', '%20')
+            _add_m3u(name_info, fpath)
         
-        name_info = item
-        song_props = get_song_props(item)
-        if song_props['loop'] is not None:
-            name_info += f' - {song_props["loop"]}'
-
-        m3u_lines.append(f'#EXTINF:1,{name_info}\n')
-        m3u_lines.append(f'../{s}\n')
+        if len(mp3_props[item]) == 0:
+            _add_m3u(item, f'{item}.mp3')
 
     with open(f'{output_dir}/{name}.m3u', 'w') as f:
         f.writelines(m3u_lines)
@@ -142,7 +144,9 @@ def create_pdf(items, output_dir, name):
 
     merger = PdfFileMerger()
 
-    for pdf in pdfs:
+    flat_pdfs = [pdf for song_pdfs in pdfs for pdf in song_pdfs]
+
+    for pdf in flat_pdfs:
         if pdf is None:
             continue
         merger.append(pdf)
@@ -163,43 +167,52 @@ def _get_all_pdf_candidate_paths():
 
     return all_paths
 
-def _get_dist(item_name, pdf_name):
-    if item_name == pdf_name:
+def _get_dist(item_name, file_name):
+    if item_name == file_name or file_name.startswith(item_name):
         return -100
 
-    if '-' in pdf_name:
-        pdf_song_name = pdf_name.split('-')[1].strip()
+    if '-' in file_name:
+        file_song_name = file_name.split('-')[1].strip()
         item_song_name = item_name.split('-')[1].strip()
 
-        if pdf_song_name == item_song_name:
-            if pdf_name.endswith(pdf_song_name):
+        if file_song_name == item_song_name:
+            if file_name.endswith(file_song_name):
                 return -1
             return 0
 
-        return editdistance.eval(pdf_song_name, item_song_name)
+        return editdistance.eval(file_song_name, item_song_name)
 
     return 100
 
-def _get_best(item, all_pdf_candidate_paths):
+def _get_best(item, all_paths):
     MAX_DIST = 999
     min_dist = MAX_DIST
-    best_pdf = None
+    best_paths = []
 
-    for pdf_path in all_pdf_candidate_paths:
-        pdf_name = os.path.basename(pdf_path).lower()
-        item_name = get_full_name(item).lower().strip()
+    artist_name = get_artist(item).lower().strip()
+    artist_name_exp = get_artist(item, expand_abbrs=True).lower().strip()
+    song_name = get_name(item).lower().strip()
 
-        for item_name_alt in get_alternatives(item_name):
-            dist = _get_dist(item_name_alt, pdf_name)
+    to_compare = [f'{artist_name} - {song_name}']
+    if artist_name_exp != artist_name:
+        to_compare += [f'{artist_name_exp} - {song_name}']
+
+    for path in all_paths:
+        file_name = os.path.basename(path).lower()
+
+        if 'hey dad' in item.lower() and 'help' in path.lower():
+            print()
+
+        for item_name in to_compare:
+            dist = _get_dist(item_name, file_name.split('.')[0])
 
             if dist < min_dist:
                 min_dist = dist
-                best_pdf = pdf_path
+                best_paths = [path]
+            elif dist == min_dist:
+                best_paths.append(path)
 
-    if min_dist < MAX_DIST:
-        return best_pdf
-
-    return None
+    return list(set(best_paths))
 
 def get_pdf_paths(items):
     # get all pdf PATHS from which we'll choose the PDFs
@@ -212,9 +225,9 @@ def get_pdf_paths(items):
         item_props = get_song_props(item)
         if 'pdf' in item_props:
             if item_props['pdf'] == None:
-                pdfs.append(None)
+                pdfs.append([])
                 continue
-            pdfs.append(item_props['pdf'].replace('PREFIX', PREFIX))
+            pdfs.append([item_props['pdf'].replace('PREFIX', PREFIX)])
             continue
 
         # let's find the most matching PDF
@@ -223,7 +236,7 @@ def get_pdf_paths(items):
     for z in zip([get_full_name(i) for i in items], [p for p in pdfs]):
         print(z)
 
-    print(f'Found {len([p for p in pdfs if p is not None])} PDFs for {len(items)} items')
+    print(f'Found PDFs for {len([p for p in pdfs if p is not None])} items out of {len(items)}')
 
     return pdfs
 
@@ -266,13 +279,14 @@ def upload_to_drive(output_dir, name, parent=None):
     with open(f'{output_dir}/{name}.json') as f:
         data = json.loads(f.read())
         for item in data.values():
-            if 'mp3' not in item or item['mp3'] is None:
+            if 'mp3' not in item:
                 continue
 
-            mp3_fpath = item['mp3'].strip()
-            print(f'- uploading {mp3_fpath}...')
-            mp3_parent_id = bt_folder_id if mp3_fpath.split('/')[-2] == 'bts' else fs_folder_id
-            gapi.create_or_update_file(service, mp3_fpath, mp3_fpath.split('/')[-1], mp3_parent_id, update=False)
+            for mp3_fpath in item['mp3']:
+                mp3_fpath = f'{REPE_FOLDER}/{mp3_fpath.strip()}'
+                print(f'- uploading {mp3_fpath}...')
+                mp3_parent_id = bt_folder_id if mp3_fpath.split('/')[-2] == 'bts' else fs_folder_id
+                gapi.create_or_update_file(service, mp3_fpath, mp3_fpath.split('/')[-1], mp3_parent_id, update=False)
 
 
 if __name__ == "__main__":

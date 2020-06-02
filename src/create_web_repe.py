@@ -13,7 +13,7 @@ def make_repe_for_web(pl=None):
 
     for item in data:
         item_props = get_song_props(item)
-        if 'used' in item_props and item_props['used'] == False:
+        if 'webused' in item_props and item_props['webused'] == False:
             continue
 
         name = get_name(item)

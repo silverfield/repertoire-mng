@@ -1,6 +1,6 @@
 [
     {
-        "name": "DS - Brothers in arms",
+        "name": "Dire Straits - Brothers in arms",
         "tags": [
             "relaxed",
             "dsmk",
@@ -14,25 +14,25 @@
         "loop": null
     },
     {
-        "name": "DS - Down to the waterline",
+        "name": "Dire Straits - Down to the waterline",
         "tags": [
             "guitary"
         ],
-        "used": false,
+        "webused": false,
         "versions": [
             "bt"
         ],
         "loop": null
     },
     {
-        "name": "DS - Going home",
+        "name": "Dire Straits - Going home",
         "tags": [
             "dsmk",
             "guitary",
             "rocky",
             "instrumental"
         ],
-        "used": false,
+        "webused": false,
         "pdf": "PREFIX/music/akordy/chords/Mark Knopfler - Local hero.pdf",
         "versions": [
             "bt"
@@ -40,14 +40,14 @@
         "loop": null
     },
     {
-        "name": "DS - Money for nothing",
+        "name": "Dire Straits - Money for nothing",
         "tags": [
             "dsmk",
             "rocky",
             "guitary",
             "famous"
         ],
-        "used": true,
+        "webused": true,
         "versions": [
             "bt",
             "nbt"
@@ -55,7 +55,7 @@
         "loop": 16
     },
     {
-        "name": "DS - On every street",
+        "name": "Dire Straits - On every street",
         "tags": [
             "dsmk",
             "relaxed",
@@ -69,7 +69,7 @@
         "loop": null
     },
     {
-        "name": "DS - Private investigations",
+        "name": "Dire Straits - Private investigations",
         "tags": [
             "dsmk",
             "relaxed",
@@ -84,7 +84,7 @@
         "loop": null
     },
     {
-        "name": "DS - Romeo and Juliet",
+        "name": "Dire Straits - Romeo and Juliet",
         "tags": [
             "dsmk",
             "relaxed",
@@ -98,7 +98,7 @@
         "loop": 0
     },
     {
-        "name": "DS - Six blade knife",
+        "name": "Dire Straits - Six blade knife",
         "tags": [
             "dsmk",
             "rocky",
@@ -111,7 +111,7 @@
         "loop": 8
     },
     {
-        "name": "DS - Sultans of swing",
+        "name": "Dire Straits - Sultans of swing",
         "tags": [
             "famous",
             "dsmk",
@@ -126,7 +126,7 @@
         "loop": null
     },
     {
-        "name": "DS - Telegraph road",
+        "name": "Dire Straits - Telegraph road",
         "tags": [
             "dsmk",
             "rocky",
@@ -138,7 +138,7 @@
         "loop": null
     },
     {
-        "name": "DS - Tunnel of love",
+        "name": "Dire Straits - Tunnel of love",
         "tags": [
             "dsmk",
             "rocky",
@@ -150,12 +150,12 @@
         "loop": null
     },
     {
-        "name": "DS - Walk of life",
+        "name": "Dire Straits - Walk of life",
         "tags": [
             "dsmk",
             "rocky"
         ],
-        "used": false,
+        "webused": false,
         "versions": [
             "bt",
             "nbt"
@@ -163,7 +163,7 @@
         "loop": null
     },
     {
-        "name": "DS - Where do you think you're going",
+        "name": "Dire Straits - Where do you think you're going",
         "tags": [
             "rocky",
             "acoustic",
@@ -177,7 +177,7 @@
         "loop": 14
     },
     {
-        "name": "EC - Layla",
+        "name": "Eric Clapton - Layla",
         "tags": [
             "famous",
             "rhythm",
@@ -192,14 +192,14 @@
         "loop": 12
     },
     {
-        "name": "FH - How I'll remember Cardiff",
+        "name": "Fero Hajnovic - How I'll remember Cardiff",
         "tags": [
             "acoustic",
             "relaxed",
             "rhythm",
             "guitary"
         ],
-        "used": true,
+        "webused": true,
         "versions": [
             "bt",
             "nbt"
@@ -207,14 +207,14 @@
         "loop": null
     },
     {
-        "name": "FH - At the ocean shore",
+        "name": "Fero Hajnovic - At the ocean shore",
         "tags": [
             "acoustic",
             "songwriter",
             "relaxed",
             "guitary"
         ],
-        "used": true,
+        "webused": true,
         "versions": [
             "nbt",
             "bt"
@@ -222,7 +222,7 @@
         "loop": 95
     },
     {
-        "name": "FH - African Bird",
+        "name": "Fero Hajnovic - African Bird",
         "tags": [
             "relaxed",
             "guitary"
@@ -234,7 +234,7 @@
         "loop": 99
     },
     {
-        "name": "FH - Ocean shore",
+        "name": "Fero Hajnovic - Ocean shore",
         "tags": [
             "relaxed",
             "guitary",
@@ -248,7 +248,7 @@
         "loop": null
     },
     {
-        "name": "FH - Sticks in the water",
+        "name": "Fero Hajnovic - Sticks in the water",
         "tags": [
             "relaxed",
             "guitary",
@@ -262,7 +262,7 @@
         "loop": 94
     },
     {
-        "name": "FH - Bluff",
+        "name": "Fero Hajnovic - Bluff",
         "tags": [
             "acoustic",
             "relaxed",
@@ -275,7 +275,7 @@
         "loop": null
     },
     {
-        "name": "FH - Calling at Newport",
+        "name": "Fero Hajnovic - Calling at Newport",
         "tags": [
             "rocky",
             "acoustic",
@@ -288,7 +288,7 @@
         "loop": [37, 98]
     },
     {
-        "name": "FH - Daily ride",
+        "name": "Fero Hajnovic - Daily ride",
         "tags": [
             "rocky",
             "acoustic",
@@ -302,7 +302,7 @@
         "loop": null
     },
     {
-        "name": "FH - Everyday",
+        "name": "Fero Hajnovic - Everyday",
         "tags": [
             "rocky",
             "acoustic",
@@ -315,7 +315,7 @@
         "loop": null
     },
     {
-        "name": "FH - Fargo and Pelgrim",
+        "name": "Fero Hajnovic - Fargo and Pelgrim",
         "tags": [
             "acoustic",
             "relaxed",
@@ -329,7 +329,7 @@
         "loop": 97
     },
     {
-        "name": "FH - Happy Home",
+        "name": "Fero Hajnovic - Happy Home",
         "tags": [
             "rhythm",
             "acoustic"
@@ -341,7 +341,7 @@
         "loop": null
     },
     {
-        "name": "FH - Hey dad",
+        "name": "Fero Hajnovic - Hey dad",
         "tags": [
             "acoustic",
             "relaxed",
@@ -355,7 +355,7 @@
         "loop": 96
     },
     {
-        "name": "FH - Let's go fail",
+        "name": "Fero Hajnovic - Let's go fail",
         "tags": [
             "rhythm",
             "acoustic"
@@ -367,7 +367,7 @@
         "loop": null
     },
     {
-        "name": "FH - Summer breeze",
+        "name": "Fero Hajnovic - Summer breeze",
         "tags": [
             "acoustic",
             "relaxed",
@@ -380,7 +380,7 @@
         "loop": null
     },
     {
-        "name": "FH - Summer tune",
+        "name": "Fero Hajnovic - Summer tune",
         "tags": [
             "acoustic",
             "relaxed",
@@ -394,7 +394,7 @@
         "loop": 11
     },
     {
-        "name": "FH - Vices",
+        "name": "Fero Hajnovic - Vices",
         "tags": [
             "acoustic",
             "relaxed",
@@ -407,7 +407,7 @@
         "loop": null
     },
     {
-        "name": "FH - When this is done",
+        "name": "Fero Hajnovic - When this is done",
         "tags": [
             "acoustic",
             "relaxed",
@@ -419,7 +419,7 @@
         "loop": null
     },
     {
-        "name": "MK - Are we in trouble now",
+        "name": "Mark Knopfler - Are we in trouble now",
         "tags": [
             "relaxed",
             "guitary"
@@ -431,7 +431,7 @@
         "loop": 93
     },
     {
-        "name": "MK - Boom like that",
+        "name": "Mark Knopfler - Boom like that",
         "tags": [
             "rocky",
             "guitary",
@@ -444,7 +444,7 @@
         "loop": null
     },
     {
-        "name": "MK - Darling pretty",
+        "name": "Mark Knopfler - Darling pretty",
         "tags": [
             "rocky",
             "guitary",
@@ -456,7 +456,7 @@
         "loop": null
     },
     {
-        "name": "MK - Davil Baby",
+        "name": "Mark Knopfler - Davil Baby",
         "tags": [
             "relaxed",
             "guitary",
@@ -469,7 +469,7 @@
         "loop": null
     },
     {
-        "name": "MK - Going home 96",
+        "name": "Mark Knopfler - Going home 96",
         "tags": [
             "dsmk",
             "rocky",
@@ -482,7 +482,7 @@
         "loop": null
     },
     {
-        "name": "MK - Golden Heart",
+        "name": "Mark Knopfler - Golden Heart",
         "tags": [
             "relaxed",
             "guitary",
@@ -495,7 +495,7 @@
         "loop": 0
     },
     {
-        "name": "MK - Heart full of holes",
+        "name": "Mark Knopfler - Heart full of holes",
         "tags": [
             "relaxed",
             "acoustic"
@@ -507,7 +507,7 @@
         "loop": 29
     },
     {
-        "name": "MK - Hillfarmer's blues",
+        "name": "Mark Knopfler - Hillfarmer's blues",
         "tags": [
             "relaxed",
             "guitary",
@@ -520,7 +520,7 @@
         "loop": null
     },
     {
-        "name": "MK - I dug up a diamon",
+        "name": "Mark Knopfler - I dug up a diamon",
         "tags": [
             "relaxed",
             "guitary",
@@ -532,7 +532,7 @@
         "loop": null
     },
     {
-        "name": "MK - Local hero",
+        "name": "Mark Knopfler - Local hero",
         "tags": [
             "dsmk",
             "relaxed",
@@ -545,7 +545,7 @@
         "loop": null
     },
     {
-        "name": "MK - Piper to the end",
+        "name": "Mark Knopfler - Piper to the end",
         "tags": [
             "relaxed",
             "guitary",
@@ -558,7 +558,7 @@
         "loop": null
     },
     {
-        "name": "MK - Sailing to Philadelphia",
+        "name": "Mark Knopfler - Sailing to Philadelphia",
         "btsuffix": "my",
         "tags": [
             "relaxed",
@@ -572,7 +572,7 @@
         "loop": 24
     },
     {
-        "name": "MK - Speedway At Nazareth",
+        "name": "Mark Knopfler - Speedway At Nazareth",
         "tags": [
             "rocky",
             "guitary",
@@ -584,7 +584,7 @@
         "loop": null
     },
     {
-        "name": "MK - What it is",
+        "name": "Mark Knopfler - What it is",
         "tags": [
             "rocky",
             "guitary",
@@ -597,7 +597,7 @@
     },
     {
         "name": "Mike Oldfield - Moonlight shadow",
-        "used": false,
+        "webused": false,
         "tags": [
             "rocky",
             "guitary",
@@ -623,7 +623,7 @@
         "loop": null
     },
     {
-        "name": "PF - Coming Back To Life",
+        "name": "Pink Floyd - Coming Back To Life",
         "tags": [
             "relaxed",
             "guitary",
@@ -635,8 +635,8 @@
         "loop": null
     },
     {
-        "name": "PF - Lost For Words",
-        "used": false,
+        "name": "Pink Floyd - Lost For Words",
+        "webused": false,
         "tags": [
             "acoustic",
             "guitary",
@@ -725,7 +725,7 @@
     },
     {
         "name": "Damien Rice - I Dont Want To Change You",
-        "used": false,
+        "webused": false,
         "tags": [
             "famous",
             "singing",
@@ -798,7 +798,7 @@
         "loop": 0
     },
     {
-        "name": "FH - In style",
+        "name": "Fero Hajnovic - In style",
         "tags": [
             "relaxed",
             "songwriter",
@@ -1212,7 +1212,7 @@
             "relaxed",
             "singing"
         ],
-        "used": false,
+        "webused": false,
         "versions": [
             "nbt"
         ],
@@ -1225,7 +1225,7 @@
             "famous",
             "rhythm"
         ],
-        "used": false,
+        "webused": false,
         "versions": [
             "nbt"
         ],
@@ -1238,10 +1238,36 @@
             "rhythm",
             "singing"
         ],
-        "used": false,
+        "webused": false,
         "versions": [
             "nbt"
         ],
         "loop": 4
+    },
+    {
+        "name": "Billy Joel - Vienna",
+        "tags": [
+            "acoustic",
+            "famous",
+            "singing"
+        ],
+        "versions": [
+            "nbt"
+        ],
+        "loop": 0
+    },
+    {
+        "name": "BBC - News tune",
+        "pdf": null,
+        "tags": [
+            "famous",
+            "instrumental",
+            "rocky"
+        ],
+        "webused": false,
+        "versions": [
+            "bt"
+        ],
+        "loop": 0
     }
 ]

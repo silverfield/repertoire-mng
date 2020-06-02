@@ -27,31 +27,28 @@ def mkdir(d):
 mkdir(DATA_DIR)
 mkdir(OUTPUT_DIR)
 
-COMMON_ABBRS = [
-    ['FH', 'Fero Hajnovic'],
-    ['DS', 'Dire Straits'],
-    ['MK', 'Mark Knopfler'],
-    ['EC', 'Eric Clapton'],
-    ['PF', 'Pink Floyd'],
-]
-COMMON_ABBRS.extend([abbr[::-1] for abbr in COMMON_ABBRS])
+COMMON_ABBRS = {
+    'FH': 'Fero Hajnovic',
+    'DS': 'Dire Straits',
+    'MK': 'Mark Knopfler',
+    'EC': 'Eric Clapton',
+    'PF': 'Pink Floyd',
+}
 
-def get_alternatives(s):
-    res = set([s])
-    for abbr in COMMON_ABBRS:
-        s_alt = s.replace(abbr[0].lower(), abbr[1].lower())
-        res.add(s_alt)
+def get_artist(item, expand_abbrs=False):
+    artist = item.split(' - ')[0]
 
-    return list(res)
+    if expand_abbrs:
+        if artist in COMMON_ABBRS:
+            artist = COMMON_ABBRS[artist]
 
-def get_artist(item):
-    return item.split(' - ')[0]
+    return artist
 
 def get_name(item):
     return item.split(' - ')[1]
 
-def get_full_name(item):
-    return f'{get_artist(item)} - {get_name(item)}'
+def get_full_name(item, expand_artist_abbrs=False):
+    return f'{get_artist(item, expand_artist_abbrs)} - {get_name(item)}'
 
 def is_bt(item):
     return item.split(' - ')[-1] == 'BT'
@@ -65,14 +62,10 @@ with open(f'{DATA_DIR}/song-props.json', 'r') as f:
     # print(PROPS)
 
 def get_song_props(item):
-    key = get_full_name(item).lower()
+    key = get_full_name(item, expand_artist_abbrs=True).lower()
 
     if key in PROPS:
         return PROPS[key]
-    else:
-        for key_rep in get_alternatives(key):
-            if key_rep in PROPS:
-                return PROPS[key_rep]
 
     err_msg = f'{item} not found in props'
     print(err_msg)
