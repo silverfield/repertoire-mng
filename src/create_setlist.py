@@ -200,9 +200,6 @@ def _get_best(item, all_paths):
     for path in all_paths:
         file_name = os.path.basename(path).lower()
 
-        if 'hey dad' in item.lower() and 'help' in path.lower():
-            print()
-
         for item_name in to_compare:
             dist = _get_dist(item_name, file_name.split('.')[0])
 

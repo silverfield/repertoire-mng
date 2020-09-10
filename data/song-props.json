@@ -1272,7 +1272,6 @@
     },
     {
         "name": "Fero Hajnovic - Walking on",
-        "pdf": null,
         "tags": [
             "acoustic",
             "guitary",
@@ -1281,7 +1280,8 @@
         ],
         "webused": true,
         "versions": [
-            "nbt"
+            "nbt",
+            "bt"
         ],
         "loop": 38
     }
