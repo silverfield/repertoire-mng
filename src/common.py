@@ -9,7 +9,7 @@ OUTPUT_DIR = f'{cur_dir}/../output'
 TYPE_BT = 'bt'
 TYPE_NBT = 'nbt'
 
-ON_LINUX = os.path.exists('/d')
+ON_LINUX = os.path.exists('/opt')
 
 PREFIX = '/d'
 if not ON_LINUX:
@@ -17,7 +17,7 @@ if not ON_LINUX:
 PDF_DIRS = [f'{PREFIX}/music/akordy/chords', f'{PREFIX}/music/akordy/fero-hajnovic']
 REPE_FOLDER = f'{PREFIX}/music/repertoire'
 
-WEBSITE_DATA_DIR = '/home/fero/wspace/fhweb/code/src/data'
+WEBSITE_DATA_DIR = '/home/fero/wspace/fhweb/src/data'
 if not ON_LINUX:
     WEBSITE_DATA_DIR = 'G:/wspace/fhweb/fhweb/src/data'
 
